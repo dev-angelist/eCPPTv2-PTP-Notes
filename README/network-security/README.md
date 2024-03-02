@@ -6,7 +6,7 @@
 2. [Network Based Attacks](../../readme/network-security/2.1-1/)
 3. [The Metasploit Framework (MSF)](2.3/)
 4. [Exploitation](2.4.md)
-5. [Post-Exploitation](2.3/post-exploitation.md)
+5. [Post-Exploitation](../../readme/network-security/2.4-1/)
 6. [Social Engineering](../../readme/network-security/2.4-2.md)
 
 > #### ❗ Disclaimer
