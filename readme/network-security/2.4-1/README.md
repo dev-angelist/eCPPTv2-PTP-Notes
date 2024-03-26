@@ -24,8 +24,8 @@
 > * ​[Win Post Exploitation - Metasploit](https://attackdefense.com/listing?labtype=windows-post-exploitation\&subtype=windows-post-exploitation-metasploit)​
 > * ​[Win Maintaining Access](https://attackdefense.com/listing?labtype=windows-maintaining-access\&subtype=windows-maintaining-access-basics)​
 
-{% content-ref url="https://app.gitbook.com/s/PNcjhcAuvH4mlZKYrNu3/README/host-and-network-penetration-testing/2.3-the-metasploit-framework-msf/post-exploitation" %}
-[Post Exploitation](https://app.gitbook.com/s/PNcjhcAuvH4mlZKYrNu3/README/host-and-network-penetration-testing/2.3-the-metasploit-framework-msf/post-exploitation)
+{% content-ref url="https://app.gitbook.com/s/PNcjhcAuvH4mlZKYrNu3/readme/host-and-network-penetration-testing/2.3-the-metasploit-framework-msf/post-exploitation" %}
+[Post Exploitation](https://app.gitbook.com/s/PNcjhcAuvH4mlZKYrNu3/readme/host-and-network-penetration-testing/2.3-the-metasploit-framework-msf/post-exploitation)
 {% endcontent-ref %}
 
 {% content-ref url="2.2-pivoting.md" %}

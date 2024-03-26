@@ -100,7 +100,7 @@ I will try to indicate the path I used and which I would recommend to reach a le
 * Tiberius Buffer Overflow Prep Room🏠 [THM Room ](https://tryhackme.com/room/bufferoverflowprep)
 * Brainstorm 🏠 [THM Room](https://tryhackme.com/room/brainstorm)
 * Gatekeeper 🚩 [THM CTF ](https://tryhackme.com/room/gatekeeper)🟠  - My Writeup
-* Brainpan 1 🚩 [THM CTF](https://tryhackme.com/room/brainpan) 🔴 - My Writeup
+* Brainpan 1 🚩 [THM CTF](https://tryhackme.com/room/brainpan) 🔴 - [My Writeup](https://app.gitbook.com/s/rRWtuMw6xkkeDjZfkcWC/vulnhub/brainpain-bof)
 * 🗒️ [https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rst](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rsthttps://github.com/gh0x0st/Buffer\_Overflowhttps:/boschko.ca/braindead-buffer-overflow-guide-to-pass-the-oscp-blindfolded/)
 * 🗒️ [https://github.com/gh0x0st/Buffer\_Overflow](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rsthttps://github.com/gh0x0st/Buffer\_Overflowhttps:/boschko.ca/braindead-buffer-overflow-guide-to-pass-the-oscp-blindfolded/)
 * 🗒️ [https://boschko.ca/braindead-buffer-overflow-guide-to-pass-the-oscp-blindfolded/](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rsthttps://github.com/gh0x0st/Buffer\_Overflowhttps:/boschko.ca/braindead-buffer-overflow-guide-to-pass-the-oscp-blindfolded/)
@@ -110,6 +110,7 @@ I will try to indicate the path I used and which I would recommend to reach a le
 * INE eCCPT Pivoting Material 🗒️
 * Pivoting using Metasploit 🗒️ [TutorialsPoint Article](https://www.tutorialspoint.com/metasploit/metasploit\_pivoting.htm)
 * ContainMe 🚩 [THM CTF](https://tryhackme.com/room/containme1) 🟢 - My Writeup
+* Wreath 🏠 [THM Room](https://tryhackme.com/r/room/wreath) - [Writeup](https://pencer.io/ctf/ctf-thm-wreath/)
 * 🗒️ [https://www.offsec.com/metasploit-unleashed/pivoting/](https://www.offsec.com/metasploit-unleashed/pivoting/)
 * 🗒️ [https://pentest.blog/explore-hidden-networks-with-double-pivoting/](https://pentest.blog/explore-hidden-networks-with-double-pivoting/)&#x20;
 * 🗒️ [https://www.youtube.com/watch?v=QNoIX1au\_CM](https://www.youtube.com/watch?v=QNoIX1au\_CM)&#x20;
