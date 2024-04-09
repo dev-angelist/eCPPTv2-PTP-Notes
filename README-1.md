@@ -2,7 +2,7 @@
 description: Penetration Tester Professional (PTP) RoadMap -  Exam Preparation
 ---
 
-# 🛣️ RoadMap
+# 🛣️ RoadMap & My Experience
 
 <figure><img src=".gitbook/assets/image (24).png" alt="" width="375"><figcaption></figcaption></figure>
 
@@ -11,7 +11,23 @@ The path to becoming a penetration tester is like a winding river, ever-changing
 
 The journey to becoming a penetration tester is a lifelong one. It is a journey of continuous learning, discovery, and self-improvement.
 
-I will try to indicate the path I used and which I would recommend to reach a level necessary to pass the exam. 👇
+I'm writing this 'review' to assist aspiring candidates in their journey towards obtaining the eCPPTv2 certification. My aim is to share the resources, insights, and tools essential for preparation, offering advice and addressing common concerns. Unlike the eJPTv2 exam, where you have a only two days to tackle everything alongside multiple-choice questions, the eCPPTv2 certification presents a different challenge. This exam grants you a generous timeframe of 7 days to compromise the entire environment and an additional 7 days to compile a comprehensive professional report detailing all identified vulnerabilities, their criticality, and proposed resolutions.
+
+While seven days may seem ample, completing the exam in less time is entirely feasible. Personally, I managed to conquer it within four days, allowing myself one day of respite, and dedicated two days to crafting a detailed report spanning a total of 80 pages. Is it worth the effort? Undoubtedly. The eCPPTv2 certification rigorously evaluates your prowess in pivoting, buffer overflow exploits, and, most importantly, your comprehension of the pentesting process. Success hinges not on merely reaching the root but on uncovering every vulnerability within the environment. Hence, a robust methodology and thorough enumeration are indispensable. Unlike conventional CTF challenges, you won't find user.txt or root.txt flags; instead, you'll encounter files containing crucial information such as passwords, IPs, or network segments, facilitating your progression within the network. I recommend using a diagram/map of the entire environment since otherwise you can get very involved and it is better to work organized, for example Excalidraw.com or Draft.io.
+
+Here are some tips and insights to aid your preparation:
+
+1. **Master Metasploit**: Proficiency in utilizing Metasploit is paramount, as a good portion of the exam necessitates its usage.
+2. **Thoroughly Review the Letter of Engagement**: Pay close attention to the "Letter of Engagement" document as it provides insights into the exam's structure and requirements. This document must be included in your final report, along with a graphical representation of the compromised areas marked in red.
+3. **It's Not a CTF**: Unlike traditional Capture The Flag (CTF) challenges, the eCPPTv2 exam is designed to be more approachable.
+4. **Emphasize Post-Exploitation Techniques**: Effective post-exploitation strategies are crucial for gathering information and pivoting to other machines.
+5. **Mind Your Nmap Switches**: Be cautious when using Nmap with non-aggressive settings. Setting it to -T1 can prevent accidental resets and loss of progress during scanning or pivoting.
+6. **Patience is Key**: Don't be discouraged if it takes the full 7 days to compromise the environment. Persistence pays off in the long run.
+7. **Leverage Productivity Techniques**: Consider employing techniques like the Pomodoro Technique to maintain focus during scanning and enumeration phases.
+
+Personally I didn't follow the INE course, but I relied on the resources found online that I tried to list on my github.
+
+Here below the path I used and which I would recommend to reach a level necessary to pass the exam. 👇
 
 ## Background Information
 
@@ -91,10 +107,10 @@ I will try to indicate the path I used and which I would recommend to reach a le
 * Empline 🚩 [THM CTF](https://tryhackme.com/room/empline) 🟠  - My Writeup
 * Internal 🚩 [THM CTF](https://tryhackme.com/room/internal) 🔴 - My Writeup
 
-## Buffer Overflow
+## [Buffer Overflow](README/system-security/1.3-buffer-overflow.md)
 
 * INE eCCPT BoF Material 🗒️
-* TCM BoF Material 🗒️
+* TCM BoF [Material ](https://youtu.be/ncBblM920jw?si=qQXZmm2hKh32q9rY)🗒️
 * Post Exploitation Basics  🏠 [THM Room](https://tryhackme.com/room/postexploit)
 * Sudo Buffer Overflow 🏠 [THM Room](https://tryhackme.com/room/sudovulnsbof)
 * Tiberius Buffer Overflow Prep Room🏠 [THM Room ](https://tryhackme.com/room/bufferoverflowprep)
@@ -105,7 +121,7 @@ I will try to indicate the path I used and which I would recommend to reach a le
 * 🗒️ [https://github.com/gh0x0st/Buffer\_Overflow](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rsthttps://github.com/gh0x0st/Buffer\_Overflowhttps:/boschko.ca/braindead-buffer-overflow-guide-to-pass-the-oscp-blindfolded/)
 * 🗒️ [https://boschko.ca/braindead-buffer-overflow-guide-to-pass-the-oscp-blindfolded/](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rsthttps://github.com/gh0x0st/Buffer\_Overflowhttps:/boschko.ca/braindead-buffer-overflow-guide-to-pass-the-oscp-blindfolded/)
 
-## **Pivoting**
+## [**Pivoting**](readme/network-security/2.4-1/2.2-pivoting.md)
 
 * INE eCCPT Pivoting Material 🗒️
 * Pivoting using Metasploit 🗒️ [TutorialsPoint Article](https://www.tutorialspoint.com/metasploit/metasploit\_pivoting.htm)
@@ -115,7 +131,7 @@ I will try to indicate the path I used and which I would recommend to reach a le
 * 🗒️ [https://pentest.blog/explore-hidden-networks-with-double-pivoting/](https://pentest.blog/explore-hidden-networks-with-double-pivoting/)&#x20;
 * 🗒️ [https://www.youtube.com/watch?v=QNoIX1au\_CM](https://www.youtube.com/watch?v=QNoIX1au\_CM)&#x20;
 
-## **Reporting**
+## [**Reporting**](readme/metasploit-and-ruby-1/)
 
 It's a good choice use one of these source: **TCM's** template, **Offensive Security's** pentest report, the **ITProTv** sample report, and INE's reporting guide.
 
