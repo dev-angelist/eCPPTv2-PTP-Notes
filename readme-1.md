@@ -4,9 +4,12 @@ description: Penetration Tester Professional (PTP) RoadMap -  Exam Preparation
 
 # 🛣️ RoadMap & My Experience
 
-<figure><img src=".gitbook/assets/image (31).png" alt="" width="375"><figcaption></figcaption></figure>
+<div align="center">
 
-\
+<figure><img src=".gitbook/assets/image (1).png" alt="" width="375"><figcaption></figcaption></figure>
+
+</div>
+
 The path to becoming a penetration tester is like a winding river, ever-changing and unpredictable. To navigate it, one must be adaptable, resourceful, and always willing to learn.
 
 The journey to becoming a penetration tester is a lifelong one. It is a journey of continuous learning, discovery, and self-improvement.
