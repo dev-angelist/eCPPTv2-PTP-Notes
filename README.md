@@ -8,7 +8,7 @@ description: >-
 
 <div align="left">
 
-<figure><img src=".gitbook/assets/image (26).png" alt="" width="375"><figcaption><p><a href="https://security.ine.com/certifications/ecppt-certification/">https://security.ine.com/certifications/ecppt-certification/</a></p></figcaption></figure>
+<figure><img src=".gitbook/assets/image (33).png" alt="" width="375"><figcaption><p><a href="https://security.ine.com/certifications/ecppt-certification/">https://security.ine.com/certifications/ecppt-certification/</a></p></figcaption></figure>
 
 </div>
 
@@ -16,15 +16,15 @@ description: >-
 
 \~ 84 hours (_`~56h of videos`_) **8** courses , **85** videos, **83** quizzes, **27** labs
 
-* **​**[**System Security**](README/system-security/) \~ 13 hours
-* [**Network Security**](README/network-security/) \~ 33 hours
-* [**PowerShell for Pentesters**](README/powershell-for-pt/) \~ 6 hours
-* [**​Linux Exploitation**](README/linux-exploitation/) \~ 9 hours
-* **​**[**Web App Security**](README/web-app-security/) \~ 10 hours
-* [**​Wi-Fi Security** ](README/wi-fi-security/)\~ 6 hours
-* [**​Metasploit & Ruby**](README/metasploit-and-ruby/) \~ 8 hours
+* **​**[**System Security**](readme/system-security/) \~ 13 hours
+* [**Network Security**](readme/network-security/) \~ 33 hours
+* [**PowerShell for Pentesters**](readme/powershell-for-pt/) \~ 6 hours
+* [**​Linux Exploitation**](readme/linux-exploitation/) \~ 9 hours
+* **​**[**Web App Security**](readme/web-app-security/) \~ 10 hours
+* [**​Wi-Fi Security** ](readme/wi-fi-security/)\~ 6 hours
+* [**​Metasploit & Ruby**](readme/metasploit-and-ruby/) \~ 8 hours
 
-🛣️ [**RoadMap / Exam Preparation** ](README-1.md)🧑🏻‍🏫
+🛣️ [**RoadMap / Exam Preparation** ](readme-1.md)🧑🏻‍🏫
 
 ## E-Links 🔗📔 <a href="#useful-links" id="useful-links"></a>
 
@@ -50,7 +50,7 @@ description: >-
 
 ## Resources 📑📘
 
-### 👉 [Preparation RoadMap to pass eCPPT/PTP exam](README-1.md) 🛣️
+### 👉 [Preparation RoadMap to pass eCPPT/PTP exam](readme-1.md) 🛣️
 
 ### 👉 [eCPPT/PTP Cheat Sheet](eccpt-cheat-sheet.md) 📔
 

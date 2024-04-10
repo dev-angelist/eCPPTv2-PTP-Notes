@@ -125,7 +125,7 @@ use post/linux/gather/hashdump
 
 This exploit generates a txt file with all hashes, we can see list of dump with `loot` command and read them using `cat` command.
 
-<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption><p><a href="https://images.squarespace-cdn.com/content/5a01100f692ebe0459a1859f/1603347414982-SZ68WZFHL6N9LG7S5HMF/BSY+Security+Class+Diagrams+-+_etc_passwd+(L).jpg?format=1500w&#x26;content-type=image%2Fjpeg">https://images.squarespace-cdn.com/content/5a01100f692ebe0459a1859f/1603347414982-SZ68WZFHL6N9LG7S5HMF/BSY+Security+Class+Diagrams+-+_etc_passwd+%28L%29.jpg?format=1500w&#x26;content-type=image%2Fjpeg</a></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (16).png" alt=""><figcaption><p><a href="https://images.squarespace-cdn.com/content/5a01100f692ebe0459a1859f/1603347414982-SZ68WZFHL6N9LG7S5HMF/BSY+Security+Class+Diagrams+-+_etc_passwd+(L).jpg?format=1500w&#x26;content-type=image%2Fjpeg">https://images.squarespace-cdn.com/content/5a01100f692ebe0459a1859f/1603347414982-SZ68WZFHL6N9LG7S5HMF/BSY+Security+Class+Diagrams+-+_etc_passwd+%28L%29.jpg?format=1500w&#x26;content-type=image%2Fjpeg</a></p></figcaption></figure>
 
 After it, we can launch shell /bin/bash and f.e. change root psw:
 
