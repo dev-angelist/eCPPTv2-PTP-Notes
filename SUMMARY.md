@@ -1,6 +1,6 @@
 # Table of contents
 
-* [📝 eCCPTv2 / PTP - Notes](README.md)
+* [📝 eCPPTv2 / PTP - Notes](README.md)
   * [1️⃣ 1 - ​System Security](README/system-security/README.md)
     * [1.1 Architecture Foundamentals](README/system-security/1.1-architecture-foundamentals.md)
     * [1.2 Assemblers and Tools](README/system-security/1.2-assemblers-and-tools.md)
@@ -79,4 +79,4 @@
   * [📄 Report](readme/metasploit-and-ruby-1/README.md)
     * [How to write a PT Report](readme/metasploit-and-ruby-1/7.1.md)
 * [🛣️ RoadMap & My Experience](README-1.md)
-* [📔 eCCPT Cheat Sheet](eccpt-cheat-sheet.md)
+* [📔 eCPPT Cheat Sheet](eccpt-cheat-sheet.md)

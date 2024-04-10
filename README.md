@@ -1,10 +1,10 @@
 ---
 description: >-
-  INE/eLearnSecurity Certified Professional Penetration Tester (eCCPT) / PTP v2
+  INE/eLearnSecurity Certified Professional Penetration Tester (eCPPT) / PTP v2
   Notes
 ---
 
-# 📝 eCCPTv2 / PTP - Notes
+# 📝 eCPPTv2 / PTP - Notes
 
 <div align="left">
 
@@ -29,9 +29,9 @@ description: >-
 ## E-Links 🔗📔 <a href="#useful-links" id="useful-links"></a>
 
 * Where to find the PTPv2 (Professional Penetration Testing v2) course? - [INE Learning Paths](https://security.ine.com/certifications/ecppt-certification/)​
-* Where to find the eCCPTv2 certification exam? - [eCCPTv2](https://security.ine.com/certifications/ecppt-certification/)​
+* Where to find the eCPPTv2 certification exam? - [eCPPTv2](https://security.ine.com/certifications/ecppt-certification/)​
 
-## ​[eCCPT](https://security.ine.com/certifications/ecppt-certification/) Exam 📄🖊️ <a href="#ejpt-exam" id="ejpt-exam"></a>
+## ​[eCPPT](https://security.ine.com/certifications/ecppt-certification/) Exam 📄🖊️ <a href="#ejpt-exam" id="ejpt-exam"></a>
 
 * **Time limit**: 7 days + 7 days for report
 * **Expiration date**: no
@@ -50,8 +50,8 @@ description: >-
 
 ## Resources 📑📘
 
-### 👉 [Preparation RoadMap to pass eCCPT/PTP exam](README-1.md) 🛣️
+### 👉 [Preparation RoadMap to pass eCPPT/PTP exam](README-1.md) 🛣️
 
-### 👉 [eCCPT/PTP Cheat Sheet](eccpt-cheat-sheet.md) 📔
+### 👉 [eCPPT/PTP Cheat Sheet](eccpt-cheat-sheet.md) 📔
 
 > 📖 [Read the Lab Guidelines](https://assets.ine.com/certifications/exam-guides/eCPPTv2\_PRE\_EXAM.pdf) <mark style="color:yellow;">📖</mark>

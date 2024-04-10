@@ -120,7 +120,7 @@ Here below the **path** I used and which I would recommend to reach a level nece
 
 ## [Buffer Overflow](README/system-security/1.3-buffer-overflow.md)
 
-* INE eCCPT BoF Material 🗒️
+* INE eCPPT BoF Material 🗒️
 * TCM BoF [Material ](https://youtu.be/ncBblM920jw?si=qQXZmm2hKh32q9rY)🗒️
 * Post Exploitation Basics  🏠 [THM Room](https://tryhackme.com/room/postexploit)
 * Sudo Buffer Overflow 🏠 [THM Room](https://tryhackme.com/room/sudovulnsbof)
@@ -134,7 +134,7 @@ Here below the **path** I used and which I would recommend to reach a level nece
 
 ## [**Pivoting**](readme/network-security/2.4-1/2.2-pivoting.md)
 
-* INE eCCPT Pivoting Material 🗒️
+* INE eCPPT Pivoting Material 🗒️
 * Pivoting using Metasploit 🗒️ [TutorialsPoint Article](https://www.tutorialspoint.com/metasploit/metasploit\_pivoting.htm)
 * ContainMe 🚩 [THM CTF](https://tryhackme.com/room/containme1) 🟢 - My Writeup
 * Wreath 🏠 [THM Room](https://tryhackme.com/r/room/wreath) - [Writeup](https://pencer.io/ctf/ctf-thm-wreath/)
@@ -167,4 +167,4 @@ It's a good choice use one of these source: **TCM's** template, **Offensive Secu
 
 ## CheatSheet <a href="#e940" id="e940"></a>
 
-* 🗒️[eCCPT — CheatSheet](https://app.gitbook.com/o/s2H3MdEB0Qp2IbE58Gxw/s/otIy5NxxVXxLTnh5crZs/\~/changes/56/eccpt-cheat-sheet)
+* 🗒️[eCPPT — CheatSheet](https://app.gitbook.com/o/s2H3MdEB0Qp2IbE58Gxw/s/otIy5NxxVXxLTnh5crZs/\~/changes/56/eccpt-cheat-sheet)
