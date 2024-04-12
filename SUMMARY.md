@@ -78,5 +78,5 @@
     * [7.1 Metasploit](readme/metasploit-and-ruby/7.1.md)
   * [📄 Report](readme/metasploit-and-ruby-1/README.md)
     * [How to write a PT Report](readme/metasploit-and-ruby-1/7.1.md)
-* [🛣️ RoadMap & My Experience](readme-1.md)
-* [📔 eCPPT Cheat Sheet](eccpt-cheat-sheet.md)
+* [🛣️ RoadMap & My Experience](roadmap-and-my-experience.md)
+* [📔 eCPPT Cheat Sheet](ecppt-cheat-sheet.md)
