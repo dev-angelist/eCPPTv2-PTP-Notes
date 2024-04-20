@@ -24,7 +24,7 @@ description: >-
 * [**​Wi-Fi Security** ](readme/wi-fi-security/)\~ 6 hours
 * [**​Metasploit & Ruby**](readme/metasploit-and-ruby/) \~ 8 hours
 
-🛣️ [**RoadMap / Exam Preparation** ](readme-1.md)🧑🏻‍🏫
+🛣️ [**RoadMap / Exam Preparation** ](roadmap-and-my-experience.md)🧑🏻‍🏫
 
 ## E-Links 🔗📔 <a href="#useful-links" id="useful-links"></a>
 
@@ -50,8 +50,10 @@ description: >-
 
 ## Resources 📑📘
 
-### 👉 [Preparation RoadMap to pass eCPPT/PTP exam](readme-1.md) 🛣️
+### [👉 Preparation RoadMap to pass eCPPT/PTP exam 🛣️](roadmap-and-my-experience.md)
 
-### 👉 [eCPPT/PTP Cheat Sheet](eccpt-cheat-sheet.md) 📔
+### 👉 [Exam Experience](https://medium.com/@dev-angelist/learning-path-my-experience-for-the-eccptv2-ptp-certification-april-2024-15ddf6b29a8f) 💯
+
+### 👉 [eCPPT/PTP Cheat Sheet ](ecppt-cheat-sheet.md)📔
 
 > 📖 [Read the Lab Guidelines](https://assets.ine.com/certifications/exam-guides/eCPPTv2\_PRE\_EXAM.pdf) <mark style="color:yellow;">📖</mark>
