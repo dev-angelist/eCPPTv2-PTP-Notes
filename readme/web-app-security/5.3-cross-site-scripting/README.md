@@ -1,23 +1,24 @@
 # 5.3 - Cross Site Scripting
 
-## Cross Site Scripting
-
 ### Topics
 
-> 1. Cross Site Scripting
-> 2. Anatomy of an XSS exploitation
-> 3. The Three Types of XSS
-> 4. Finding XSS
-> 5. XSS Exploitation
-> 6. Mitigation
+> 1. [ XSS Anatomy](5.3.1-cross-site-scripting.md)
+> 2. [Reflected XSS](5.3.2-anatomy-of-an-xss-exploitation.md)
+> 3. [Stored XSS](5.3.3-the-three-types-of-xss.md)
+> 4. [DOM-Based XSS](5.3.4-finding-xss.md)
+> 5. [Identifying & Exploiting XSS with XSSer](5.3.5-xss-exploitation.md)
 
-Attacks triggered by user input, known as **input validation attacks**, occur when malicious input attempts to undermine the expected function of an application due to inadequate validation by the application or server before processing the data.
+{% embed url="https://owasp.org/www-community/attacks/xss/" %}
 
+## Cross-Site Scripting (XSS)
 
+Cross-Site Scripting (XSS) constitutes a client-side web vulnerability enabling attackers to embed malicious scripts into web pages.
 
+This vulnerability often arises from inadequate input sanitization/validation within web applications.
 
+Attackers exploit XSS vulnerabilities to insert harmful code into web applications. Given that XSS is a client-side vulnerability, these scripts execute within the victim's browser.
 
-
+XSS vulnerabilities impact web applications deficient in input validation and reliant on client-side scripting languages such as JavaScript, Flash, CSS, etc.
 
 ### Web Basics
 
@@ -51,6 +52,8 @@ DVWA is designed to provide a platform for practicing various common web vulnera
 DVWA
 {% endembed %}
 
+{% embed url="https://portswigger.net/web-security/cross-site-scripting/cheat-sheet" %}
+
 #### DVWA - My Writeups
 
 {% content-ref url="https://app.gitbook.com/s/rRWtuMw6xkkeDjZfkcWC/dvwa" %}
@@ -65,4 +68,6 @@ Web Burp Suite Security Academy
 
 > #### ❗ Disclaimer
 >
-> * **Never use tools and techniques on real IP addresses, hosts or networks without proper authorization!**
+> **Never use tools and techniques on real IP addresses, hosts or networks without proper     authorization!**
+>
+> ❗_**Never run these techniques on un-authorized addresses**_
