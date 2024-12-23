@@ -22,7 +22,7 @@ Here are some **tips** and **insights** to aid your **preparation**:
 6. **Patience is Key**: Don’t be discouraged if it takes the full 7 days to compromise the environment. Persistence pays off in the long run.
 7. **Act like you’re a journalist:** Take as many screens as possible during the 7 days of access to the lab, or if possible start filling out the report at the same time, because if you forgot to track something, it would be a problem.
 
-Creating a customized **homemade lab**, composed of three or more **network interfaces** is the best training for this exam, starting with network of 2/3 interfaces and machines without vulnerabilities (direct access with SSH for example, [see here](https://app.gitbook.com/o/s2H3MdEB0Qp2IbE58Gxw/s/otIy5NxxVXxLTnh5crZs/\~/changes/56/readme/network-security/2.4-1/2.2-pivoting-1)), increasing the network interfaces with more vulnerable machines (including one vulnerable to BoF, such as [Brainpain](https://app.gitbook.com/o/s2H3MdEB0Qp2IbE58Gxw/s/e4F1pi3gddqrR51EW7bB/brainpain-bof)).
+Creating a customized **homemade lab**, composed of three or more **network interfaces** is the best training for this exam, starting with network of 2/3 interfaces and machines without vulnerabilities (direct access with SSH for example, [see here](https://app.gitbook.com/o/s2H3MdEB0Qp2IbE58Gxw/s/otIy5NxxVXxLTnh5crZs/~/changes/56/readme/network-security/2.4-1/2.2-pivoting-1)), increasing the network interfaces with more vulnerable machines (including one vulnerable to BoF, such as [Brainpain](https://app.gitbook.com/o/s2H3MdEB0Qp2IbE58Gxw/s/e4F1pi3gddqrR51EW7bB/brainpain-bof)).
 
 Remember that you already have an OVA machine on your VMWare/VirtualBox running on **Windows 10**, with **ImmunityDebugger** and the **Mona** plugin installed, to be used to test and prepare the shellcode to exploit the BoF-vulnerable software running on one of the machines on the network.
 
@@ -52,7 +52,7 @@ Here below the **path** I used and which I would recommend to reach a level nece
 * Vulnerabilities 101 🏠 [THM Room](https://tryhackme.com/room/vulnerabilities101)
 * Reverse Shell & Bind Shell 🗒️ [Hacking Tutorials Article](https://www.hackingtutorials.org/networking/hacking-netcat-part-2-bind-reverse-shells/)
 * eJPTv2 Ine Full Course 🗒️ [eJPTv2 Notes](https://app.gitbook.com/o/s2H3MdEB0Qp2IbE58Gxw/s/PNcjhcAuvH4mlZKYrNu3/)
-* ⏩ [Linux Course](https://www.youtube.com/watch?v=qcX89gkdlYs\&list=PLKZZXjqZrqQvfAhgY7Nit5ynpK3kN\_3tx) (Italian)🤌 🇮🇹
+* ⏩ [Linux Course](https://www.youtube.com/watch?v=qcX89gkdlYs\&list=PLKZZXjqZrqQvfAhgY7Nit5ynpK3kN_3tx) (Italian)🤌 🇮🇹
 * ⏩ [Ethical Hacking Course](https://www.youtube.com/watch?v=L90xYiqqjBI\&list=PLKZZXjqZrqQtKGgJuAYhzYczf1KIdswvO\&pp=iAQB) (Italian)🤌 🇮🇹
 
 ### Tooling
@@ -91,8 +91,23 @@ Here below the **path** I used and which I would recommend to reach a level nece
 * All In One 🚩 [THM CTF](https://tryhackme.com/room/allinonemj) 🟠 - My Writeup
 * Daily Bugle 🚩 [THM CTF](https://tryhackme.com/room/dailybugle) 🔴 - My Writeup
 
+### [Buffer Overflow](https://github.com/sidneysimas/eCPPTv2-PTP-Notes/blob/main/readme/system-security/1.3-buffer-overflow.md)
+
+* INE eCPPT BoF Material 🗒️
+* TCM BoF [Material ](https://youtu.be/ncBblM920jw?si=qQXZmm2hKh32q9rY)🗒️
+* Post Exploitation Basics 🏠 [THM Room](https://tryhackme.com/room/postexploit)
+* Sudo Buffer Overflow 🏠 [THM Room](https://tryhackme.com/room/sudovulnsbof)
+* Tiberius Buffer Overflow Prep Room🏠 [THM Room](https://tryhackme.com/room/bufferoverflowprep)
+* Brainstorm 🏠 [THM Room](https://tryhackme.com/room/brainstorm)
+* Gatekeeper 🚩 [THM CTF ](https://tryhackme.com/room/gatekeeper)🟠 - My Writeup
+* Brainpan 1 🚩 [THM CTF](https://tryhackme.com/room/brainpan) 🔴 - [My Writeup](https://app.gitbook.com/s/rRWtuMw6xkkeDjZfkcWC/vulnhub/brainpain-bof)
+* 🗒️ [https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rst](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rsthttps://github.com/gh0x0st/Buffer_Overflowhttps:/boschko.ca/braindead-buffer-overflow-guide-to-pass-the-oscp-blindfolded/)
+* 🗒️ [https://github.com/gh0x0st/Buffer\_Overflow](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rsthttps://github.com/gh0x0st/Buffer_Overflowhttps:/boschko.ca/braindead-buffer-overflow-guide-to-pass-the-oscp-blindfolded/)
+* 🗒️ [https://boschko.ca/braindead-buffer-overflow-guide-to-pass-the-oscp-blindfolded/](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rsthttps://github.com/gh0x0st/Buffer_Overflowhttps:/boschko.ca/braindead-buffer-overflow-guide-to-pass-the-oscp-blindfolded/)
+
 ### Post Exploitation
 
+* Windows Privilege Escalation - [Notes](https://dev-angelist.gitbook.io/windows-privilege-escalation/)
 * Post Exploitation Basics 🏠 [THM Room](https://tryhackme.com/room/postexploit)
 * Sudo Security Bypass 🏠 [THM Room](https://tryhackme.com/room/sudovulnsbypass)
 * Sudo Buffer Overflow 🏠 [THM Room](https://tryhackme.com/room/sudovulnsbof)
@@ -101,7 +116,7 @@ Here below the **path** I used and which I would recommend to reach a level nece
 * Linux Privesc Arena 🏠 [THM Room](https://tryhackme.com/room/linuxprivescarena)
 * Windows Privesc 🏠 [THM Room](https://tryhackme.com/room/windows10privesc)
 * Bypass UAC 🏠 [THM Room](https://tryhackme.com/room/bypassinguac)
-* ⏩ [MsfVenom Guide](https://www.youtube.com/watch?v=XLWyjN\_eBhw) (Spanish) 🇪🇸
+* ⏩ [MsfVenom Guide](https://www.youtube.com/watch?v=XLWyjN_eBhw) (Spanish) 🇪🇸
 * Simple CTF 🚩 [THM CTF](https://tryhackme.com/room/easyctf) 🟢 - [My Writeup](https://app.gitbook.com/s/rRWtuMw6xkkeDjZfkcWC/thm/simple-ctf)
 * Blaster 🚩 [THM CTF](https://tryhackme.com/room/blaster) 🟢 - [My Writeup](https://app.gitbook.com/s/rRWtuMw6xkkeDjZfkcWC/thm/blaster)
 * Blue 🚩 [THM CTF](https://tryhackme.com/room/blue) 🟢 - [My Writeup](https://app.gitbook.com/s/rRWtuMw6xkkeDjZfkcWC/thm/eternal-blue)
@@ -113,36 +128,33 @@ Here below the **path** I used and which I would recommend to reach a level nece
 * Empline 🚩 [THM CTF](https://tryhackme.com/room/empline) 🟠 - My Writeup
 * Internal 🚩 [THM CTF](https://tryhackme.com/room/internal) 🔴 - My Writeup
 
-### [Buffer Overflow](https://github.com/sidneysimas/eCPPTv2-PTP-Notes/blob/main/readme/system-security/1.3-buffer-overflow.md)
-
-* INE eCPPT BoF Material 🗒️
-* TCM BoF [Material ](https://youtu.be/ncBblM920jw?si=qQXZmm2hKh32q9rY)🗒️
-* Post Exploitation Basics 🏠 [THM Room](https://tryhackme.com/room/postexploit)
-* Sudo Buffer Overflow 🏠 [THM Room](https://tryhackme.com/room/sudovulnsbof)
-* Tiberius Buffer Overflow Prep Room🏠 [THM Room](https://tryhackme.com/room/bufferoverflowprep)
-* Brainstorm 🏠 [THM Room](https://tryhackme.com/room/brainstorm)
-* Gatekeeper 🚩 [THM CTF ](https://tryhackme.com/room/gatekeeper)🟠 - My Writeup
-* Brainpan 1 🚩 [THM CTF](https://tryhackme.com/room/brainpan) 🔴 - [My Writeup](https://app.gitbook.com/s/rRWtuMw6xkkeDjZfkcWC/vulnhub/brainpain-bof)
-* 🗒️ [https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rst](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rsthttps://github.com/gh0x0st/Buffer\_Overflowhttps:/boschko.ca/braindead-buffer-overflow-guide-to-pass-the-oscp-blindfolded/)
-* 🗒️ [https://github.com/gh0x0st/Buffer\_Overflow](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rsthttps://github.com/gh0x0st/Buffer\_Overflowhttps:/boschko.ca/braindead-buffer-overflow-guide-to-pass-the-oscp-blindfolded/)
-* 🗒️ [https://boschko.ca/braindead-buffer-overflow-guide-to-pass-the-oscp-blindfolded/](https://github.com/Tib3rius/Pentest-Cheatsheets/blob/master/exploits/buffer-overflows.rsthttps://github.com/gh0x0st/Buffer\_Overflowhttps:/boschko.ca/braindead-buffer-overflow-guide-to-pass-the-oscp-blindfolded/)
-
 ### [**Pivoting**](https://github.com/sidneysimas/eCPPTv2-PTP-Notes/blob/main/readme/network-security/2.4-1/2.2-pivoting.md)
 
 * INE eCPPT Pivoting Material 🗒️
-* Pivoting using Metasploit 🗒️ [TutorialsPoint Article](https://www.tutorialspoint.com/metasploit/metasploit\_pivoting.htm)
+* Pivoting using Metasploit 🗒️ [TutorialsPoint Article](https://www.tutorialspoint.com/metasploit/metasploit_pivoting.htm)
 * ContainMe 🚩 [THM CTF](https://tryhackme.com/room/containme1) 🟢 - My Writeup
 * Wreath 🏠 [THM Room](https://tryhackme.com/r/room/wreath) - [Writeup](https://pencer.io/ctf/ctf-thm-wreath/)
 * 🗒️ [https://www.offsec.com/metasploit-unleashed/pivoting/](https://www.offsec.com/metasploit-unleashed/pivoting/)
 * 🗒️ [https://pentest.blog/explore-hidden-networks-with-double-pivoting/](https://pentest.blog/explore-hidden-networks-with-double-pivoting/)
-* ⏩ [Home Lab: ProxyChains - eCPPT prep](https://www.youtube.com/watch?v=QNoIX1au\_CM)
+* ⏩ [Home Lab: ProxyChains - eCPPT prep](https://www.youtube.com/watch?v=QNoIX1au_CM)
 * ⏩ [Pivoting with Ligolo](https://www.youtube.com/watch?v=DM1B8S80EvQ)
 * ⏩ [Pivoting with Metasploit ](https://www.youtube.com/watch?v=RotyKByc8Jc)(Spanish) 🇪🇸
 * ⏩ [Manual Pivoting using Chisel and Socat](https://www.youtube.com/watch?v=l3IEnXYVjWw\&t=664s) (Spanish) 🇪🇸
 * ⏩ [Double Pivoting](https://www.youtube.com/watch?v=zGm7kUvC31M\&t=542s) (Spanish) 🇪🇸
 * ⏩ [Pivoting Manual Playlist S4vitar](https://www.youtube.com/watch?v=L1jSoCcvRY4\&t=6380s) (Spanish) 🇪🇸
 
-### [**Reporting**](https://github.com/sidneysimas/eCPPTv2-PTP-Notes/blob/main/readme/metasploit-and-ruby-1)
+### Red Team & Active Directory (only for v3)
+
+* [CRTP Notes](https://dev-angelist.gitbook.io/crtp-notes) 🗒️
+* [Windows Privilege Escalation - Video EN](https://www.youtube.com/watch?v=n382EGuJP8Y\&list=PLJnLaWkc9xRh8hmNFWyzWMFgAHo8Lgr93) 🇬🇧 🎦
+* [OSCP Guide 10/12 – Active Directory - Video EN](https://www.youtube.com/watch?v=26M3POQ_51A\&list=PLJnLaWkc9xRgOyupMhNiVFfgvxseWDH5x\&index=10) 🇬🇧 🎦
+* [The Cyber Mentor (TCM) - Hacking Active Directory for Beginners - Video EN](https://www.youtube.com/watch?v=VXxH4n684HE) 🇬🇧 🎦
+* [The Cyber Mentor (TCM) - Windows Privilege Escalation for Beginners - Video EN](https://www.youtube.com/watch?v=uTcrbNBcoxQ) 🇬🇧 🎦
+* [Cisco and Pentester Academy Attacking Active Directory Class with Nikhil Mittal - Video EN](https://www.youtube.com/watch?v=1fiZbYhEkYA) 🇬🇧 🎦
+* [Active Directory - John Hammond Series - Video EN](https://www.youtube.com/watch?v=pKtDQtsubio\&list=PL1H1sBF1VAKVoU6Q2u7BBGPsnkn-rajlp) 🇬🇧 🎦
+* [Active Directory THM Room Walkthrough - Esadecimale - Video ITA](https://youtu.be/WEXpcDg25QM?si=XFA4hFbvwxyLSae7) 🇮🇹 🎦
+
+### [**Reporting**](https://github.com/sidneysimas/eCPPTv2-PTP-Notes/blob/main/readme/metasploit-and-ruby-1) **(only for v2)**
 
 It's a good choice use one of these source: **TCM's** template, **Offensive Security's** pentest report, the **ITProTv** sample report, and INE's reporting guide.
 
@@ -154,11 +166,13 @@ It's a good choice use one of these source: **TCM's** template, **Offensive Secu
 
 ### Other Resources
 
-* eCPPT Field Manual: [https://drive.google.com/file/d/1wC7RMTrWjt74rO8u4X-zM89T\_hZzF\_A5/edit](https://drive.google.com/file/d/1wC7RMTrWjt74rO8u4X-zM89T\_hZzF\_A5/edit)
+* eCPPT Field Manual: [https://drive.google.com/file/d/1wC7RMTrWjt74rO8u4X-zM89T\_hZzF\_A5/edit](https://drive.google.com/file/d/1wC7RMTrWjt74rO8u4X-zM89T_hZzF_A5/edit)
 * [https://www.hackingarticles.in/lateral-movement-pass-the-hash-attack/](https://www.hackingarticles.in/lateral-movement-pass-the-hash-attack/)
 * [https://www.sans.org/posters/pivot-cheat-sheet/](https://www.sans.org/posters/pivot-cheat-sheet/)
 * [https://medium.com/@dev-angelist/learning-path-my-experience-for-the-eccptv2-ptp-certification-april-2024-15ddf6b29a8f](https://medium.com/@dev-angelist/learning-path-my-experience-for-the-eccptv2-ptp-certification-april-2024-15ddf6b29a8f)
 
 ### CheatSheet <a href="#user-content-e940" id="user-content-e940"></a>
 
-* 🗒️[eCPPT — CheatSheet](https://app.gitbook.com/o/s2H3MdEB0Qp2IbE58Gxw/s/otIy5NxxVXxLTnh5crZs/\~/changes/56/eccpt-cheat-sheet)
+* 🗒️ [eCPPT — CheatSheet](https://app.gitbook.com/o/s2H3MdEB0Qp2IbE58Gxw/s/otIy5NxxVXxLTnh5crZs/~/changes/56/eccpt-cheat-sheet)
+* 🗒️ [Windows Privilege Escalation Cheatsheet](https://dev-angelist.gitbook.io/windows-privilege-escalation/cheatsheet)
+* 🗒️ [CRTP (Active Directory Notes) Cheatsheet](https://dev-angelist.gitbook.io/crtp-notes/crtp-cheat-sheet)
