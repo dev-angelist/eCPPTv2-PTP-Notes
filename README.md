@@ -1,12 +1,12 @@
 ---
 description: >-
   INE/eLearnSecurity Certified Professional Penetration Tester (eCPPT) / PTP v2
-  and v3 Notes
+  Notes
 ---
 
-# 📝 eCPPTv2 and v3 / PTP - Notes
+# 📝 eCPPTv2 / PTP - Notes
 
-<figure><img src=".gitbook/assets/image (80).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (82).png" alt=""><figcaption></figcaption></figure>
 
 ## 📕 eCPPT - Version 3 (newest - after 2024) <a href="#course-duration-and-topics" id="course-duration-and-topics"></a>
 
@@ -14,12 +14,12 @@ description: >-
 
 \~ 107 hours (_`~97 of videos`_) **10** courses , **172** videos, **124** quizzes, **67** labs
 
-* [**Resource Development & Initial Access**](readme/ecpptv3/powershell-for-pt/) \~ 22 hours
-* [**Web Application Attacks** ](readme/ecpptv3/web-app-security/)\~ 14 hours
-* [**Network Security**](readme/ecpptv3/network-security/) \~ 17 hours
-* [**Exploit Development** ](readme/ecpptv3/system-security/)\~ 7 hours
-* [**Post Exploitation**](readme/ecpptv3/linux-exploitation/) \~ 18 hours
-* [**Red Teaming**](readme/ecpptv3/wi-fi-security/) \~ 19 hours
+* [**Resource Development & Initial Access**](broken-reference) \~ 22 hours
+* [**Web Application Attacks** ](broken-reference)\~ 14 hours
+* [**Network Security**](broken-reference) \~ 17 hours
+* [**Exploit Development** ](broken-reference)\~ 7 hours
+* [**Post Exploitation**](broken-reference) \~ 18 hours
+* [**Red Teaming**](broken-reference) \~ 19 hours
 
 🛣️ [**RoadMap / Exam Preparation** ](roadmap-and-my-experience.md)🧑🏻‍🏫
 
@@ -91,13 +91,13 @@ description: >-
 
 \~ 84 hours (_`~56h of videos`_) **8** courses , **85** videos, **83** quizzes, **27** labs
 
-* **​**[**System Security**](readme/readme/system-security/) \~ 13 hours
-* [**Network Security**](readme/readme/network-security/) \~ 33 hours
-* [**PowerShell for Pentesters**](readme/readme/powershell-for-pt/) \~ 6 hours
-* **​**[**Linux Exploitation**](readme/readme/linux-exploitation/) \~ 9 hours
-* [**​Web App Security**](readme/readme/web-app-security/) \~ 10 hours
-* **​**[**Wi-Fi Security**](readme/readme/wi-fi-security/) \~ 6 hours
-* **​**[**Metasploit & Ruby**](readme/readme/metasploit-and-ruby/) \~ 8 hours
+* **​**[**System Security**](system-security/) \~ 13 hours
+* [**Network Security**](network-security/) \~ 33 hours
+* [**PowerShell for Pentesters**](powershell-for-pt/) \~ 6 hours
+* **​**[**Linux Exploitation**](linux-exploitation/) \~ 9 hours
+* [**​Web App Security**](web-app-security/) \~ 10 hours
+* **​**[**Wi-Fi Security**](wi-fi-security/) \~ 6 hours
+* **​**[**Metasploit & Ruby**](metasploit-and-ruby/) \~ 8 hours
 
 🛣️ [**RoadMap / Exam Preparation** ](roadmap-and-my-experience.md)🧑🏻‍🏫
 
